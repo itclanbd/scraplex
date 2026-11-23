@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Web Scraping Guides | Scraplex</title>
+<meta name="description" content="Step-by-step guides to scraping Daraz, Google Maps and YouTube data, with example inputs and costs.">
+<meta property="og:site_name" content="Scraplex">
+<meta property="og:title" content="Web Scraping Guides | Scraplex">
+<meta property="og:description" content="Step-by-step guides to scraping Daraz, Google Maps and YouTube data, with example inputs and costs.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<script>(function(){var u=location.origin+"/guides";var l=document.createElement("link");l.rel="canonical";l.href=u;document.head.appendChild(l);var m=document.createElement("meta");m.setAttribute("property","og:url");m.content=u;document.head.appendChild(m)})()</script>
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Web scraping guides", "hasPart": [{"@type": "Article", "headline": "How to Scrape Daraz Product Data: Prices, Sellers and Stock (2026 Guide)", "url": "/guides/scrape-daraz-product-data"}, {"@type": "Article", "headline": "How to Export Daraz Product Reviews to CSV or Excel", "url": "/guides/export-daraz-reviews"}, {"@type": "Article", "headline": "How to Export YouTube Comments to Excel or CSV (No API Key)", "url": "/guides/export-youtube-comments"}, {"@type": "Article", "headline": "How to Scrape Google Maps for Local Business Leads (With Reviews)", "url": "/guides/google-maps-lead-generation"}, {"@type": "Article", "headline": "Daraz Price Tracking: Monitor Competitor Prices in Bangladesh, Pakistan and More", "url": "/guides/daraz-price-tracking"}]}</script>
+</head>
+<body data-tip="Want the data without doing it yourself? We can run it for you." data-tip-href="/custom" data-tip-label="Get a custom feed">
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Scraplex home"><span class="brand-mark">Sx</span>Scraplex</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="/#demo" data-nav="demo">Live demo</a>
+      <a href="/scrapers" data-nav="scrapers">Scrapers</a>
+      <a href="/#pricing" data-nav="pricing">Pricing</a>
+      <a href="/custom" data-nav="custom">Custom data</a>
+      <a href="/guides" data-nav="guides" aria-current="page">Guides</a>
+      <a href="/about" data-nav="about">About</a>
+    </nav>
+    <button class="theme-btn" type="button" aria-label="Switch theme"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span><i></i><i></i><i></i></span>Menu</button>
+    <a class="btn btn-mark btn-sm head-cta" href="/custom">Get a custom feed</a>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <div class="hero-talk">
+      <svg class="lex lex-float" viewBox="0 0 80 80" aria-hidden="true"></svg>
+      <div class="say" id="hero-say">Pick a guide. Each one has the exact settings I use and what the run costs.</div>
+    </div>
+    <h1>Web scraping <span class="hl">guides</span></h1>
+    <p class="lede">Practical how-tos for collecting web data: what each site offers, the exact settings to use, and what it costs.</p>
+    <div class="g-filters seg" id="g-filters" role="group" aria-label="Filter guides by site"><button type="button" aria-pressed="true" data-f="all">All guides</button><button type="button" aria-pressed="false" data-f="daraz">Daraz</button><button type="button" aria-pressed="false" data-f="youtube">YouTube</button><button type="button" aria-pressed="false" data-f="maps">Google Maps</button></div>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:0;padding-block:48px 88px">
+  <div class="wrap">
+    <a class="g-feature" href="/guides/scrape-daraz-product-data" data-g="daraz">
+      <div class="g-feature-main">
+        <span class="eyebrow">Latest guide</span>
+        <h2>How to Scrape Daraz Product Data: Prices, Sellers and Stock (2026 Guide)</h2>
+        <p class="muted">Step-by-step guide to scraping Daraz products in Bangladesh, Pakistan, Sri Lanka, Nepal and Myanmar. Export prices, discounts, sellers and stock to CSV or Excel without code.</p>
+        <span class="g-meta"><span>23 Nov 2026</span><span>7 min read</span></span>
+        <span class="btn btn-ink btn-sm" style="justify-self:start">Read the guide</span>
+      </div>
+      <div class="g-feature-side">
+        <div class="box-head"><span class="gsym icon cat-ecom" aria-hidden="true"><img src="/assets/icons/daraz-product-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><div><b>Daraz Product Scraper</b><div class="g-meta">$1.00 per 1,000 results</div></div></div>
+        <div class="msg"><svg class="lex" viewBox="0 0 80 80" aria-hidden="true"></svg><div class="bub"><b>Short answer.</b> Open the Daraz Product Scraper on Apify, choose a country domain (bd, pk, lk, np or mm), add search keywords or category URLs, and press Start. Each product comes back with its price, discount, seller, rating, sold…</div></div>
+      </div>
+    </a>
+    <div class="g-list" id="g-list">
+      <a class="g-row" href="/guides/export-daraz-reviews" data-g="daraz">
+        <span class="gsym icon cat-ecom" aria-hidden="true"><img src="/assets/icons/daraz-product-review-scraper.webp" alt="" width="44" height="44" loading="lazy"></span>
+        <span><span class="g-meta"><span>21 Nov 2026</span><span>6 min read</span><span>Daraz Product Review Scraper</span></span><h3>How to Export Daraz Product Reviews to CSV or Excel</h3><p>Export Daraz product reviews with ratings, review text, photos and votes to CSV or Excel. Filter by star rating and sort by most recent. Works in all 5 Daraz countries.</p></span>
+        <span class="g-go">Read →</span>
+      </a>
+      <a class="g-row" href="/guides/export-youtube-comments" data-g="youtube">
+        <span class="gsym icon cat-social" aria-hidden="true"><img src="/assets/icons/youtube-comments-scraper.webp" alt="" width="44" height="44" loading="lazy"></span>
+        <span><span class="g-meta"><span>19 Nov 2026</span><span>6 min read</span><span>YouTube Comments Scraper</span></span><h3>How to Export YouTube Comments to Excel or CSV (No API Key)</h3><p>Export all comments and replies from any YouTube video or Short to Excel, CSV or JSON. No YouTube API key or coding needed. Includes likes, reply counts and video stats.</p></span>
+        <span class="g-go">Read →</span>
+      </a>
+      <a class="g-row" href="/guides/google-maps-lead-generation" data-g="maps">
+        <span class="gsym icon cat-local" aria-hidden="true"><img src="/assets/icons/google-maps-scraper.webp" alt="" width="44" height="44" loading="lazy"></span>
+        <span><span class="g-meta"><span>17 Nov 2026</span><span>8 min read</span><span>Google Maps Places &amp; Reviews Scraper</span></span><h3>How to Scrape Google Maps for Local Business Leads (With Reviews)</h3><p>Build local B2B lead lists from Google Maps: business names, phones, websites, ratings and reviews by city and category. Step-by-step guide with example inputs.</p></span>
+        <span class="g-go">Read →</span>
+      </a>
+      <a class="g-row" href="/guides/daraz-price-tracking" data-g="daraz">
+        <span class="gsym icon cat-ecom" aria-hidden="true"><img src="/assets/icons/daraz-product-scraper.webp" alt="" width="44" height="44" loading="lazy"></span>
+        <span><span class="g-meta"><span>14 Nov 2026</span><span>6 min read</span><span>Daraz Product Scraper</span></span><h3>Daraz Price Tracking: Monitor Competitor Prices in Bangladesh, Pakistan and More</h3><p>Set up automated Daraz price tracking across BD, PK, LK, NP and MM. Track competitor prices, discounts and stock daily in Google Sheets, with no code.</p></span>
+        <span class="g-go">Read →</span>
+      </a>
+    </div>
+    <p class="g-empty" id="g-empty" hidden>No guides for this site yet. <a href="/custom">Tell us what you need</a> and we'll write one.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <svg class="lex lex-float" viewBox="0 0 80 80" aria-hidden="true"></svg>
+    <div><h2>Need a site we don&#x27;t cover yet?</h2><p>Tell us the site and the fields you need. We send 100 sample rows before you pay for a build.</p></div>
+    <div class="btn-row"><a class="btn btn-mark" href="/custom">Get a custom feed</a><a class="btn " href="/#scrapers">Browse scrapers</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="/"><span class="brand-mark">Sx</span>Scraplex</a>
+        <p class="muted">Ready-made scrapers you can run today, and custom data feeds built and maintained for you.</p>
+      </div>
+      <div><h4>Scrapers</h4><ul><li><a href="/scrapers/daraz-product-scraper">Daraz Product Scraper</a></li><li><a href="/scrapers/daraz-product-review-scraper">Daraz Product Review Scraper</a></li><li><a href="/scrapers/youtube-comments-scraper">YouTube Comments Scraper</a></li><li><a href="/scrapers/google-maps-scraper">Google Maps Scraper</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="/#demo">Live demo</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#markets">Daraz markets</a></li><li><a href="/custom">Custom data feeds</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about">About Scraplex</a></li><li><a href="/guides">Guides</a></li><li><a href="https://apify.com/itclan-bd" target="_blank" rel="noopener">Our Apify profile</a></li><li><a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></li></ul></div>
+    </div>
+    <div class="foot-base">
+      <span>Scraplex, a product of <a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></span>
+      <span>Building data tools since 2016.</span>
+    </div>
+    <p class="foot-note">Daraz, YouTube and Google Maps are trademarks of their owners. Scraplex is an independent tool and is not affiliated with them.</p>
+  </div>
+</footer>
+
+<div class="dock off" id="dock" aria-live="polite">
+  <div class="say" id="dock-say"><span id="dock-text"></span><br><span id="dock-act"></span><button class="dock-x" id="dock-x" type="button" aria-label="Hide Lex's tips">×</button></div>
+  <button class="dock-bot" id="dock-bot" type="button" aria-label="Show Lex's tips"><svg class="lex" viewBox="0 0 80 80" aria-hidden="true"></svg></button>
+</div>
+
+<script src="/assets/lex.js"></script>
+<script>
+(() => {
+  const f = document.getElementById("g-filters"), items = document.querySelectorAll("[data-g]"), empty = document.getElementById("g-empty");
+  f.addEventListener("click", ev => {
+    const b = ev.target.closest("button"); if (!b) return;
+    f.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    let n = 0;
+    items.forEach(el => { const show = b.dataset.f === "all" || el.dataset.g === b.dataset.f; el.hidden = !show; if (show) n++; });
+    empty.hidden = n > 0;
+    window.lexSay(document.getElementById("hero-say"), b.dataset.f === "all" ? "All guides, newest first." : `Showing ${n} ${b.textContent} guide${n === 1 ? "" : "s"}.`, 18);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How to Scrape Google Maps for Local Business Leads (With Reviews) | Scraplex</title>
+<meta name="description" content="Build local B2B lead lists from Google Maps: business names, phones, websites, ratings and reviews by city and category. Step-by-step guide with example inputs.">
+<meta property="og:site_name" content="Scraplex">
+<meta property="og:title" content="How to Scrape Google Maps for Local Business Leads (With Reviews) | Scraplex">
+<meta property="og:description" content="Build local B2B lead lists from Google Maps: business names, phones, websites, ratings and reviews by city and category. Step-by-step guide with example inputs.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<script>(function(){var u=location.origin+"/guides/google-maps-lead-generation";var l=document.createElement("link");l.rel="canonical";l.href=u;document.head.appendChild(l);var m=document.createElement("meta");m.setAttribute("property","og:url");m.content=u;document.head.appendChild(m)})()</script>
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Scrape Google Maps for Local Business Leads (With Reviews)", "description": "Build local B2B lead lists from Google Maps: business names, phones, websites, ratings and reviews by city and category. Step-by-step guide with example inputs.", "datePublished": "2026-11-17", "dateModified": "2026-11-17", "author": {"@type": "Organization", "name": "ITclan BD", "url": "https://itclanbd.com"}, "publisher": {"@type": "Organization", "name": "Scraplex"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does a lead list cost?", "acceptedAnswer": {"@type": "Answer", "text": "From $3.00 per 1,000 results. A list of 1,000 businesses costs about $3, plus any reviews you choose to include. Check the pricing tab on Apify for current rates."}}, {"@type": "Question", "name": "Does it return email addresses?", "acceptedAnswer": {"@type": "Answer", "text": "No. It returns the phone and website shown on the listing. Many teams then find emails from the website, which we can add in a custom feed."}}, {"@type": "Question", "name": "Can I search in other languages?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It supports 74 languages through the language setting."}}]}</script>
+</head>
+<body data-tip="Stuck on a step? I can run the Google Maps Places &amp; Reviews Scraper for you on a schedule." data-tip-href="/custom" data-tip-label="Get a custom feed">
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Scraplex home"><span class="brand-mark">Sx</span>Scraplex</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="/#demo" data-nav="demo">Live demo</a>
+      <a href="/scrapers" data-nav="scrapers">Scrapers</a>
+      <a href="/#pricing" data-nav="pricing">Pricing</a>
+      <a href="/custom" data-nav="custom">Custom data</a>
+      <a href="/guides" data-nav="guides" aria-current="page">Guides</a>
+      <a href="/about" data-nav="about">About</a>
+    </nav>
+    <button class="theme-btn" type="button" aria-label="Switch theme"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span><i></i><i></i><i></i></span>Menu</button>
+    <a class="btn btn-mark btn-sm head-cta" href="/custom">Get a custom feed</a>
+  </div>
+</header>
+
+<main>
+<div class="read-bar" aria-hidden="true"><i></i></div>
+<div class="wrap art-grid">
+  <article>
+    <header class="art-head">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/guides">Guides</a><span>/</span><span>Google Maps Places &amp; Reviews Scraper</span></nav>
+      <h1>How to Scrape Google Maps for Local Business Leads (With Reviews)</h1>
+      <p class="lede">Build local B2B lead lists from Google Maps: business names, phones, websites, ratings and reviews by city and category. Step-by-step guide with example inputs.</p>
+      <div class="byline"><span>By the Scraplex team at ITclan BD</span><span>Updated <time datetime="2026-11-17">17 Nov 2026</time></span><span>8 min read</span></div>
+    </header>
+    <div class="answer">
+      <svg class="lex" viewBox="0 0 80 80" aria-hidden="true"></svg>
+      <div class="say"><b>Short answer</b>Open the Google Maps Places &amp; Reviews Scraper on Apify, enter a business type such as &quot;dentist&quot; and a location such as &quot;Austin, TX&quot;, set how many places and reviews you want, and run it. Each place comes back with its name, address, phone, website, rating, hours and reviews, ready to export to CSV or your CRM. It starts at $3.00 per 1,000 results.</div>
+    </div>
+    <div class="prose">
+<p>Almost every local business has a Google Maps listing, and most keep their phone number, website and opening hours up to date because customers find them there. That makes Google Maps one of the most current lead sources for agencies, SaaS companies and B2B sales teams that sell to local businesses.</p>
+<h2 id="why">Why Google Maps is a strong lead source</h2>
+<ul>
+<li><b>Coverage:</b> restaurants, clinics, salons, contractors, shops and offices in nearly every city.</li>
+<li><b>Freshness:</b> owners update their own listings, so contact details are often more current than bought lists.</li>
+<li><b>Built-in qualification:</b> ratings, review counts and claim status tell you how established and active a business is.</li>
+</ul>
+<h2 id="fields">What you get for each business</h2>
+<p>The <a href="/scrapers/google-maps-scraper">Google Maps Places & Reviews Scraper</a> returns 44 fields per place, with up to 500 reviews nested inside each one:</p>
+<div class="tbl"><table><thead><tr><th>Group</th><th>Fields</th></tr></thead><tbody>
+<tr><td>Contact</td><td>name, address, phone, website</td></tr>
+<tr><td>Reputation</td><td>rating, review count, star distribution</td></tr>
+<tr><td>Classification</td><td>categories, price range, claim status</td></tr>
+<tr><td>Location</td><td>coordinates, Plus Code, timezone</td></tr>
+<tr><td>Activity</td><td>opening hours, popular times</td></tr>
+<tr><td>Reviews</td><td>rating, text, date, reviewer, owner reply</td></tr>
+</tbody></table></div>
+<h2 id="steps">How to build a lead list step by step</h2>
+<ol>
+<li><b>Define your ideal customer.</b> Pick the business type and the cities you sell to, for example dentists in Austin.</li>
+<li><b>Set up the search.</b> Enter "dentist" in <code>searchTerms</code> and "Austin, TX" in <code>locationQuery</code>.</li>
+<li><b>Set the volume.</b> Use <code>maxPlacesPerSearch</code> to control results per search, and <code>maxPlacesTotal</code> to cap the whole run.</li>
+<li><b>Decide on reviews.</b> Set <code>maxReviewsPerPlace</code> to 0 for a contact list only, or 10 to 20 to read what customers say.</li>
+<li><b>Run, export and clean.</b> Export to CSV, remove places without a website or phone, and import the rest into your CRM.</li>
+</ol>
+<div class="code"><pre><code>{
+  "searchTerms": ["dentist", "orthodontist"],
+  "locationQuery": "Austin, TX",
+  "maxPlacesPerSearch": 100,
+  "maxReviewsPerPlace": 10,
+  "language": "en"
+}</code></pre></div>
+<h2 id="search">Four ways to define the search</h2>
+<div class="tbl"><table><thead><tr><th>Method</th><th>Input</th><th>Best for</th></tr></thead><tbody>
+<tr><td>Keyword and place</td><td>searchTerms + locationQuery</td><td>City-level lead lists</td></tr>
+<tr><td>Map circle</td><td>latitude, longitude, radiusKm (up to 500 km)</td><td>Service areas around a point</td></tr>
+<tr><td>Maps links</td><td>startUrls</td><td>Re-running a search you built on Google Maps</td></tr>
+<tr><td>Place IDs</td><td>placeIds</td><td>Monitoring known businesses</td></tr>
+</tbody></table></div>
+<h2 id="qualify">How to qualify leads with ratings and reviews</h2>
+<p>Not every listing is a good prospect. Some simple filters help:</p>
+<ul>
+<li><b>Unclaimed listings</b> are good leads for local SEO and reputation services.</li>
+<li><b>Low ratings with many reviews</b> point to businesses that need help with service or reputation.</li>
+<li><b>No website</b> is the clearest signal for web design agencies.</li>
+<li><b>Owner replies</b> show an engaged owner who is more likely to respond to outreach.</li>
+</ul>
+<h2 id="compliance">Using the data responsibly</h2>
+<p>Business listings are public, but outreach rules still apply. Follow anti-spam and privacy laws in the countries you contact, such as CAN-SPAM in the US and GDPR in the EU, and give people an easy way to opt out. The scraper is an independent tool and is not affiliated with Google.</p>
+      <div class="cta-inline">
+        <h3>Try the Google Maps Places &amp; Reviews Scraper</h3>
+        <p>$3.00 per 1,000 results. Runs on Apify, with a free plan to start.</p>
+        <div class="btn-row"><a class="btn btn-ink" href="https://apify.com/itclan-bd/google-maps-scraper" target="_blank" rel="noopener">Run on Apify</a><a class="btn" href="/scrapers/google-maps-scraper">Watch it run</a></div>
+      </div>
+      <h2 id="faq">FAQ</h2>
+    </div>
+    <div class="faq-list"><details><summary>How much does a lead list cost?</summary><p>From $3.00 per 1,000 results. A list of 1,000 businesses costs about $3, plus any reviews you choose to include. Check the pricing tab on Apify for current rates.</p></details><details><summary>Does it return email addresses?</summary><p>No. It returns the phone and website shown on the listing. Many teams then find emails from the website, which we can add in a custom feed.</p></details><details><summary>Can I search in other languages?</summary><p>Yes. It supports 74 languages through the language setting.</p></details></div>
+  </article>
+  <aside class="aside">
+    <div class="box box-toc"><span class="c-label">On this page</span><ol class="toc" id="toc"><li><a href="#why">Why Google Maps is a strong lead source</a></li><li><a href="#fields">What you get for each business</a></li><li><a href="#steps">How to build a lead list step by step</a></li><li><a href="#search">Four ways to define the search</a></li><li><a href="#qualify">How to qualify leads with ratings and reviews</a></li><li><a href="#compliance">Using the data responsibly</a></li><li><a href="#faq">FAQ</a></li></ol></div>
+    <div class="box">
+      <div class="box-head"><span class="gsym icon cat-local" aria-hidden="true"><img src="/assets/icons/google-maps-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><div><b>Google Maps Places &amp; Reviews Scraper</b></div></div>
+      <div class="box-price">$3.00<span>per 1,000 results, billed by Apify</span></div>
+      <a class="btn btn-ink btn-sm" href="/scrapers/google-maps-scraper">See the live demo</a>
+      <a class="btn btn-sm" href="https://apify.com/itclan-bd/google-maps-scraper" target="_blank" rel="noopener">Open on Apify ↗</a>
+    </div>
+    <div class="box hl">
+      <h3>Rather not run it yourself?</h3>
+      <p class="muted">We build and run custom feeds, and fix them when the site changes. 100 sample rows first.</p>
+      <a class="btn btn-mark btn-sm" href="/custom">Get a custom feed</a>
+    </div>
+  </aside>
+</div>
+
+<section class="more">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:28px"><span class="eyebrow">Keep reading</span><h2>More guides</h2></div>
+    <div class="guide-cards"><a class="gcard" href="/guides/scrape-daraz-product-data">
+  <div class="gcard-top"><span class="gsym icon cat-ecom" aria-hidden="true"><img src="/assets/icons/daraz-product-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><span class="g-meta"><span>23 Nov 2026</span><span>7 min read</span></span></div>
+  <h3>How to Scrape Daraz Product Data: Prices, Sellers and Stock (2026 Guide)</h3>
+  <p>Step-by-step guide to scraping Daraz products in Bangladesh, Pakistan, Sri Lanka, Nepal and Myanmar. Export prices, discounts, sellers and stock to CSV or Excel without code.</p>
+</a><a class="gcard" href="/guides/export-daraz-reviews">
+  <div class="gcard-top"><span class="gsym icon cat-ecom" aria-hidden="true"><img src="/assets/icons/daraz-product-review-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><span class="g-meta"><span>21 Nov 2026</span><span>6 min read</span></span></div>
+  <h3>How to Export Daraz Product Reviews to CSV or Excel</h3>
+  <p>Export Daraz product reviews with ratings, review text, photos and votes to CSV or Excel. Filter by star rating and sort by most recent. Works in all 5 Daraz countries.</p>
+</a><a class="gcard" href="/guides/export-youtube-comments">
+  <div class="gcard-top"><span class="gsym icon cat-social" aria-hidden="true"><img src="/assets/icons/youtube-comments-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><span class="g-meta"><span>19 Nov 2026</span><span>6 min read</span></span></div>
+  <h3>How to Export YouTube Comments to Excel or CSV (No API Key)</h3>
+  <p>Export all comments and replies from any YouTube video or Short to Excel, CSV or JSON. No YouTube API key or coding needed. Includes likes, reply counts and video stats.</p>
+</a></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <svg class="lex lex-float" viewBox="0 0 80 80" aria-hidden="true"></svg>
+    <div><h2>Need a site we don&#x27;t cover yet?</h2><p>Tell us the site and the fields you need. We send 100 sample rows before you pay for a build.</p></div>
+    <div class="btn-row"><a class="btn btn-mark" href="/custom">Get a custom feed</a><a class="btn " href="/#scrapers">Browse scrapers</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="/"><span class="brand-mark">Sx</span>Scraplex</a>
+        <p class="muted">Ready-made scrapers you can run today, and custom data feeds built and maintained for you.</p>
+      </div>
+      <div><h4>Scrapers</h4><ul><li><a href="/scrapers/daraz-product-scraper">Daraz Product Scraper</a></li><li><a href="/scrapers/daraz-product-review-scraper">Daraz Product Review Scraper</a></li><li><a href="/scrapers/youtube-comments-scraper">YouTube Comments Scraper</a></li><li><a href="/scrapers/google-maps-scraper">Google Maps Scraper</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="/#demo">Live demo</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#markets">Daraz markets</a></li><li><a href="/custom">Custom data feeds</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about">About Scraplex</a></li><li><a href="/guides">Guides</a></li><li><a href="https://apify.com/itclan-bd" target="_blank" rel="noopener">Our Apify profile</a></li><li><a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></li></ul></div>
+    </div>
+    <div class="foot-base">
+      <span>Scraplex, a product of <a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></span>
+      <span>Building data tools since 2016.</span>
+    </div>
+    <p class="foot-note">Daraz, YouTube and Google Maps are trademarks of their owners. Scraplex is an independent tool and is not affiliated with them.</p>
+  </div>
+</footer>
+
+<div class="dock off" id="dock" aria-live="polite">
+  <div class="say" id="dock-say"><span id="dock-text"></span><br><span id="dock-act"></span><button class="dock-x" id="dock-x" type="button" aria-label="Hide Lex's tips">×</button></div>
+  <button class="dock-bot" id="dock-bot" type="button" aria-label="Show Lex's tips"><svg class="lex" viewBox="0 0 80 80" aria-hidden="true"></svg></button>
+</div>
+
+<script src="/assets/lex.js"></script>
+<script>
+(() => {
+  const links = [...document.querySelectorAll("#toc a")];
+  const heads = links.map(a => document.getElementById(a.getAttribute("href").slice(1))).filter(Boolean);
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    if (!en.isIntersecting) return;
+    links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + en.target.id));
+  }), { rootMargin: "-20% 0px -70% 0px" });
+  heads.forEach(h => io.observe(h));
+})();
+</script>
+</body>
+</html>

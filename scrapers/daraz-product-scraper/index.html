@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daraz Product Scraper | Scraplex</title>
+<meta name="description" content="Products, prices, sellers and stock from Daraz search and category pages. $1.00 per 1,000 results.">
+<meta property="og:site_name" content="Scraplex">
+<meta property="og:title" content="Daraz Product Scraper | Scraplex">
+<meta property="og:description" content="Products, prices, sellers and stock from Daraz search and category pages. $1.00 per 1,000 results.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<script>(function(){var u=location.origin+"/scrapers/daraz-product-scraper";var l=document.createElement("link");l.rel="canonical";l.href=u;document.head.appendChild(l);var m=document.createElement("meta");m.setAttribute("property","og:url");m.content=u;document.head.appendChild(m)})()</script>
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Daraz Product Scraper", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Search by keyword or paste category URLs and get every product with its price, discount, seller, rating, sold count and stock status. Works across all five Daraz markets, in local currency.", "offers": {"@type": "Offer", "price": "1.00", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "ITclan BD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which Daraz countries are covered?", "acceptedAnswer": {"@type": "Answer", "text": "Pakistan (daraz.pk), Bangladesh (daraz.com.bd), Nepal (daraz.com.np), Sri Lanka (daraz.lk) and Myanmar (shop.com.mm). Prices come back in the local currency."}}, {"@type": "Question", "name": "Does it return customer reviews?", "acceptedAnswer": {"@type": "Answer", "text": "No. It returns ratings and review counts. For the review text, use the Daraz Product Review Scraper."}}, {"@type": "Question", "name": "How do I run a scraper?", "acceptedAnswer": {"@type": "Answer", "text": "Open the scraper on Apify, create a free Apify account, fill in the input and press Start. Results export to CSV, JSON, Excel or Google Sheets, or come back through the Apify API."}}, {"@type": "Question", "name": "How is pricing worked out?", "acceptedAnswer": {"@type": "Answer", "text": "You pay per result on Apify, at the price shown on each scraper. Apify bills you directly. Custom feeds are quoted per project."}}]}</script>
+</head>
+<body data-tip="Want this data delivered on a schedule instead? We can run it for you." data-tip-href="/custom#quote" data-tip-label="Get a custom version">
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Scraplex home"><span class="brand-mark">Sx</span>Scraplex</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="/#demo" data-nav="demo">Live demo</a>
+      <a href="/scrapers" data-nav="scrapers" aria-current="page">Scrapers</a>
+      <a href="/#pricing" data-nav="pricing">Pricing</a>
+      <a href="/custom" data-nav="custom">Custom data</a>
+      <a href="/guides" data-nav="guides">Guides</a>
+      <a href="/about" data-nav="about">About</a>
+    </nav>
+    <button class="theme-btn" type="button" aria-label="Switch theme"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span><i></i><i></i><i></i></span>Menu</button>
+    <a class="btn btn-mark btn-sm head-cta" href="/custom">Get a custom feed</a>
+  </div>
+</header>
+
+<main>
+<section class="page-hero sp-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/scrapers">Scrapers</a><span>/</span><span>E-commerce</span></nav>
+    <div class="sp-head">
+      <div class="sp-tile cat-ecom"><span class="sp-no">01</span><span class="sp-icon"><img src="/assets/icons/daraz-product-scraper.webp" alt="Daraz Product Scraper icon" width="96" height="96"></span><span class="sp-price">$1.00</span></div>
+      <div class="sp-intro">
+        <h1>Daraz Product Scraper</h1>
+        <p class="lede">Search by keyword or paste category URLs and get every product with its price, discount, seller, rating, sold count and stock status. Works across all five Daraz markets, in local currency.</p>
+        <div class="btn-row"><a class="btn btn-mark" href="#demo">Watch it run</a><a class="btn btn-ink" href="https://apify.com/itclan-bd/daraz-product-scraper" target="_blank" rel="noopener">Run on Apify ↗</a><a class="btn" href="/custom#quote">Get a custom version</a></div>
+      </div>
+    </div>
+    <div class="facts"><div class="fact"><span>Price</span><b>$1.00 / 1,000 results</b></div><div class="fact"><span>Rating</span><b>5.0 from 8 ratings</b></div><div class="fact"><span>Users</span><b>203</b></div><div class="fact"><span>Markets</span><b>5 Daraz countries</b></div></div>
+  </div>
+</section>
+
+<section class="section" id="demo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Live demo</span>
+      <h2>Watch me run the Daraz Product Scraper</h2>
+      <p class="lede">Every run has the same four steps: the input, the run, the results and the export. This demo uses sample data and replays on its own.</p>
+    </div>
+    <div class="console" id="console"></div>
+    <p class="picker-note" style="margin-top:12px">Sample data. Real runs return the same columns, up to thousands of rows.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Output</span><h2>Data you get</h2><p class="lede">Every result is one row with these fields, ready for CSV, Excel, JSON or Google Sheets.</p></div>
+    <div class="fgroups"><div class="fgroup"><h3>Product</h3><div class="chips"><span class=chip>title</span><span class=chip>description</span><span class=chip>productId</span><span class=chip>sku</span><span class=chip>brand</span><span class=chip>brandId</span><span class=chip>categoryIds</span></div></div><div class="fgroup"><h3>Pricing</h3><div class="chips"><span class=chip>price</span><span class=chip>priceFormatted</span><span class=chip>originalPrice</span><span class=chip>discountPct</span><span class=chip>currency</span></div></div><div class="fgroup"><h3>Seller</h3><div class="chips"><span class=chip>sellerName</span><span class=chip>sellerId</span><span class=chip>location</span></div></div><div class="fgroup"><h3>Social proof</h3><div class="chips"><span class=chip>rating</span><span class=chip>reviewCount</span><span class=chip>soldCount</span></div></div><div class="fgroup"><h3>Status</h3><div class="chips"><span class=chip>inStock</span><span class=chip>isSponsored</span><span class=chip>badges</span><span class=chip>badgeText</span></div></div><div class="fgroup"><h3>Links and metadata</h3><div class="chips"><span class=chip>imageUrl</span><span class=chip>productUrl</span><span class=chip>country</span><span class=chip>scrapedAt</span></div></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap sp-split">
+    <div>
+      <div class="section-head"><span class="eyebrow">Input</span><h2>Input options</h2></div>
+      <div class="itable"><table><thead><tr><th>Option</th><th>What it does</th></tr></thead><tbody><tr><td><code>country_domain</code></td><td>Required. pk, bd, np, lk or mm.</td></tr><tr><td><code>search_keywords</code></td><td>One or more search terms.</td></tr><tr><td><code>startUrls</code></td><td>Up to 100 category, catalog or search URLs.</td></tr><tr><td><code>sortBy</code></td><td>popularity, priceasc or pricedesc.</td></tr><tr><td><code>minRating, minPrice, maxPrice</code></td><td>Filters, prices in local currency.</td></tr><tr><td><code>includeOutOfStock</code></td><td>Keep out-of-stock items. Default true.</td></tr><tr><td><code>maxProducts / maxPages</code></td><td>Default 100 products or 3 pages. 0 means no limit.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="section-head"><span class="eyebrow">For developers</span><h2>Run it from your code</h2><p class="lede">Python with the official Apify client. JavaScript and cURL work the same way.</p></div>
+      <div class="code code-copy"><button type="button" class="copy-btn" data-copy="py-code">Copy</button><pre id="py-code">from apify_client import ApifyClient
+
+client = ApifyClient(&quot;YOUR_APIFY_TOKEN&quot;)
+
+run = client.actor(&quot;itclan-bd/daraz-product-scraper&quot;).call(run_input={
+    &quot;country_domain&quot;: &quot;bd&quot;,
+    &quot;search_keywords&quot;: [&quot;earbuds&quot;],
+    &quot;maxProducts&quot;: 100,
+})
+
+for item in client.dataset(run[&quot;defaultDatasetId&quot;]).iterate_items():
+    print(item)</pre></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Use cases</span><h2>What people use it for</h2></div>
+    <div class="use-cards cat-ecom"><div class="use-card"><h3>Price monitoring</h3><p>Track your products and your competitors&#x27; prices and discounts every day.</p></div><div class="use-card"><h3>Market research</h3><p>See which brands, sellers and price points lead a category.</p></div><div class="use-card"><h3>Assortment gaps</h3><p>Find products with high sold counts and few sellers.</p></div><div class="use-card"><h3>Seller intelligence</h3><p>Map who sells what, where, and at what rating.</p></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Questions</span><h2>Questions about this scraper</h2></div>
+    <div class="faq-wrap">
+      <div class="faq-list"><details><summary>Which Daraz countries are covered?</summary><p>Pakistan (daraz.pk), Bangladesh (daraz.com.bd), Nepal (daraz.com.np), Sri Lanka (daraz.lk) and Myanmar (shop.com.mm). Prices come back in the local currency.</p></details><details><summary>Does it return customer reviews?</summary><p>No. It returns ratings and review counts. For the review text, use the Daraz Product Review Scraper.</p></details><details><summary>How do I run a scraper?</summary><p>Open the scraper on Apify, create a free Apify account, fill in the input and press Start. Results export to CSV, JSON, Excel or Google Sheets, or come back through the Apify API.</p></details><details><summary>How is pricing worked out?</summary><p>You pay per result on Apify, at the price shown on each scraper. Apify bills you directly. Custom feeds are quoted per project.</p></details></div>
+      <aside class="faq-aside">
+        <span class="c-label">Step-by-step guides</span><a class="gcard" href="/guides/scrape-daraz-product-data">
+  <div class="gcard-top"><span class="gsym icon cat-ecom" aria-hidden="true"><img src="/assets/icons/daraz-product-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><span class="g-meta"><span>23 Nov 2026</span><span>7 min read</span></span></div>
+  <h3>How to Scrape Daraz Product Data: Prices, Sellers and Stock (2026 Guide)</h3>
+  <p>Step-by-step guide to scraping Daraz products in Bangladesh, Pakistan, Sri Lanka, Nepal and Myanmar. Export prices, discounts, sellers and stock to CSV or Excel without code.</p>
+</a><a class="gcard" href="/guides/daraz-price-tracking">
+  <div class="gcard-top"><span class="gsym icon cat-ecom" aria-hidden="true"><img src="/assets/icons/daraz-product-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><span class="g-meta"><span>14 Nov 2026</span><span>6 min read</span></span></div>
+  <h3>Daraz Price Tracking: Monitor Competitor Prices in Bangladesh, Pakistan and More</h3>
+  <p>Set up automated Daraz price tracking across BD, PK, LK, NP and MM. Track competitor prices, discounts and stock daily in Google Sheets, with no code.</p>
+</a>
+        <div class="box">
+          <div class="box-head"><span class="gsym icon cat-ecom" aria-hidden="true"><img src="/assets/icons/daraz-product-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><div><b>Daraz Product Scraper</b></div></div>
+          <div class="box-price">$1.00<span>per 1,000 results, billed by Apify</span></div>
+          <a class="btn btn-ink btn-sm" href="https://apify.com/itclan-bd/daraz-product-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:0">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Related</span><h2>Other scrapers</h2></div>
+    <div class="cards"><a class="card cat-ecom" href="/scrapers/daraz-product-review-scraper" data-cat="ecom" data-text="daraz product review scraper review text, star ratings, photos and votes for any daraz product. e-commerce reviewid, reviewcontent, rating, reviewtime, boughtdate, relevancescore reviewerid, reviewername likes, upvotes, downvotes, replies images, videos productid, producttitle, producturl, productpic, productcategoryid, skuinfo sellerid, country">
+  <div class="card-head">
+    <span class="sym icon"><img src="/assets/icons/daraz-product-review-scraper.webp" alt="" width="60" height="60" loading="lazy"></span>
+    <div><small>E-commerce</small><h3>Daraz Product Review Scraper</h3></div>
+    <div class="price-tag">$1.00<span>per 1,000 reviews</span></div>
+  </div>
+  <p>Review text, star ratings, photos and votes for any Daraz product.</p>
+  <div class="chips"><span class="chip">Review</span><span class="chip">Reviewer</span><span class="chip">Engagement</span><span class="chip">Media</span><span class="chip">Product</span><span class="chip">Seller and market</span></div>
+  <span class="card-go">See the live demo →</span>
+</a><a class="card cat-local" href="/scrapers/google-maps-scraper" data-cat="local" data-text="google maps places &amp; reviews scraper business listings and their reviews from google maps, in one run. local and maps name, address, phone, website, description rating, review count, star distribution categories, price range, claim status coordinates, plus codes, timezone opening hours, popular times rating, text, translated text, photos, dates, reviewer, owner reply, per-aspect ratings">
+  <div class="card-head">
+    <span class="sym icon"><img src="/assets/icons/google-maps-scraper.webp" alt="" width="60" height="60" loading="lazy"></span>
+    <div><small>Local and maps</small><h3>Google Maps Places &amp; Reviews Scraper</h3></div>
+    <div class="price-tag">$3.00<span>per 1,000 results</span></div>
+  </div>
+  <p>Business listings and their reviews from Google Maps, in one run.</p>
+  <div class="chips"><span class="chip">Identity</span><span class="chip">Ratings</span><span class="chip">Classification</span><span class="chip">Location</span><span class="chip">Hours and traffic</span><span class="chip">Reviews</span></div>
+  <span class="card-go">See the live demo →</span>
+</a></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <svg class="lex lex-float" viewBox="0 0 80 80" aria-hidden="true"></svg>
+    <div><h2>Need more than this scraper gives you?</h2><p>Extra fields, a different site, or a daily feed into your database. We build it and keep it running.</p></div>
+    <div class="btn-row"><a class="btn btn-mark" href="/custom">Get a custom feed</a><a class="btn " href="/#scrapers">Browse scrapers</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="/"><span class="brand-mark">Sx</span>Scraplex</a>
+        <p class="muted">Ready-made scrapers you can run today, and custom data feeds built and maintained for you.</p>
+      </div>
+      <div><h4>Scrapers</h4><ul><li><a href="/scrapers/daraz-product-scraper">Daraz Product Scraper</a></li><li><a href="/scrapers/daraz-product-review-scraper">Daraz Product Review Scraper</a></li><li><a href="/scrapers/youtube-comments-scraper">YouTube Comments Scraper</a></li><li><a href="/scrapers/google-maps-scraper">Google Maps Scraper</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="/#demo">Live demo</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#markets">Daraz markets</a></li><li><a href="/custom">Custom data feeds</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about">About Scraplex</a></li><li><a href="/guides">Guides</a></li><li><a href="https://apify.com/itclan-bd" target="_blank" rel="noopener">Our Apify profile</a></li><li><a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></li></ul></div>
+    </div>
+    <div class="foot-base">
+      <span>Scraplex, a product of <a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></span>
+      <span>Building data tools since 2016.</span>
+    </div>
+    <p class="foot-note">Daraz, YouTube and Google Maps are trademarks of their owners. Scraplex is an independent tool and is not affiliated with them.</p>
+  </div>
+</footer>
+
+<div class="dock off" id="dock" aria-live="polite">
+  <div class="say" id="dock-say"><span id="dock-text"></span><br><span id="dock-act"></span><button class="dock-x" id="dock-x" type="button" aria-label="Hide Lex's tips">×</button></div>
+  <button class="dock-bot" id="dock-bot" type="button" aria-label="Show Lex's tips"><svg class="lex" viewBox="0 0 80 80" aria-hidden="true"></svg></button>
+</div>
+
+<script src="/assets/lex.js"></script>
+<script src="/assets/demo.js"></script>
+<script>
+ScraplexDemo.mount(document.getElementById("console"), { slug: "daraz-product-scraper", section: document.getElementById("demo"), loop: true });
+document.addEventListener("click", ev => {
+  const b = ev.target.closest("[data-copy]"); if (!b) return;
+  const text = document.getElementById(b.dataset.copy).textContent;
+  const done = ok => { b.textContent = ok ? "Copied" : "Select and copy"; setTimeout(() => b.textContent = "Copy", 1600); };
+  try { navigator.clipboard.writeText(text).then(() => done(true), () => done(false)); } catch (err) { done(false); }
+});
+</script>
+</body>
+</html>

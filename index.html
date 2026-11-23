@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- @seo -->
+<title>Scraplex | Web scrapers and custom data feeds</title>
+<meta name="description" content="Ready-made scrapers for Daraz, YouTube and Google Maps, plus custom data feeds built and maintained by ITclan BD. Watch each one run live.">
+<meta property="og:site_name" content="Scraplex">
+<meta property="og:title" content="Scraplex | Web scrapers and custom data feeds">
+<meta property="og:description" content="Ready-made scrapers for Daraz, YouTube and Google Maps, plus custom data feeds built and maintained by ITclan BD. Watch each one run live.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<script>(function(){var u=location.origin+"/";var l=document.createElement("link");l.rel="canonical";l.href=u;document.head.appendChild(l);var m=document.createElement("meta");m.setAttribute("property","og:url");m.content=u;document.head.appendChild(m)})()</script>
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<!-- /@seo -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+<!-- @header:home -->
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Scraplex home"><span class="brand-mark">Sx</span>Scraplex</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="/#demo" data-nav="demo">Live demo</a>
+      <a href="/scrapers" data-nav="scrapers">Scrapers</a>
+      <a href="/#pricing" data-nav="pricing">Pricing</a>
+      <a href="/custom" data-nav="custom">Custom data</a>
+      <a href="/guides" data-nav="guides">Guides</a>
+      <a href="/about" data-nav="about">About</a>
+    </nav>
+    <button class="theme-btn" type="button" aria-label="Switch theme"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span><i></i><i></i><i></i></span>Menu</button>
+    <a class="btn btn-mark btn-sm head-cta" href="/custom">Get a custom feed</a>
+  </div>
+</header>
+<!-- /@header -->
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" id="hero" data-sec="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="hero-talk">
+          <svg class="lex lex-float" viewBox="0 0 80 80" role="img" aria-label="Lex, the Scraplex bot"></svg>
+          <div class="say" id="hero-say" aria-live="polite">Hi, I'm Lex. Watch me read this page for you.</div>
+        </div>
+        <h1>Point me at a website. I'll hand you a <span class="hl">spreadsheet</span>.</h1>
+        <p class="lede">Scraplex runs ready-made scrapers for Daraz, YouTube and Google Maps, and builds custom data feeds for any other site. You get clean rows in CSV, Excel, JSON or Google Sheets.</p>
+        <div class="btn-row">
+          <a class="btn btn-mark" href="#demo">Watch a scraper run</a>
+          <a class="btn" href="#scrapers">Browse scrapers</a>
+        </div>
+        <div class="hero-stats">
+          <span><b>4</b> ready scrapers</span>
+          <span><b>5</b> Daraz markets</span>
+          <span>from <b>$0.50</b> per 1,000 rows</span>
+          <span>building since <b>2016</b></span>
+        </div>
+      </div>
+
+      <div class="scene" id="scene" aria-label="Animation: Lex reads Daraz products and fills a spreadsheet">
+        <div class="browser">
+          <div class="b-bar"><div class="b-dots"><i></i><i></i><i></i></div><div class="b-url">daraz.com.bd/catalog/?q=<b>earbuds</b></div></div>
+          <div class="p-grid" id="hero-grid"></div>
+        </div>
+        <div class="reticle" id="reticle"></div>
+        <div class="sheet">
+          <div class="sheet-top"><span>dataset · daraz-earbuds.csv</span><span class="num" id="hero-count">6 rows</span></div>
+          <div class="sheet-scroll">
+            <table class="grid" id="hero-table">
+              <thead><tr><th class="rn">#</th><th>title</th><th class="sel">price</th><th>discountPct</th><th>sellerName</th><th>rating</th><th>soldCount</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="exports on" id="hero-exports"><span>CSV</span><span>Excel</span><span>JSON</span><span>Google Sheets</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO STUDIO -->
+  <section class="section" id="demo" data-sec="demo">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Live demo</span>
+        <h2>Pick a scraper. I'll run it while you watch.</h2>
+        <p class="lede">Every run has the same four steps. You fill in the input, press Start, read the results and export them. Here I do all four for you.</p>
+      </div>
+      <div class="studio">
+        <div class="picker" id="picker" role="group" aria-label="Choose a scraper to demo"></div>
+        <div class="console" id="console">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section class="section" id="scrapers" data-sec="scrapers">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The catalog</span>
+        <h2>Four scrapers, ready to run today</h2>
+        <p class="lede">Each one runs on Apify. Make a free account, fill in the input and press Start. You pay per result, and Apify bills you directly.</p>
+      </div>
+      <div class="cards" id="cards"></div>
+      <div class="request">
+        <div class="request-l">
+          <div class="sym" style="--cat:transparent">+</div>
+          <div><h3>Need a site that isn't here?</h3><p class="muted">Tell us the site and the fields. We'll quote a custom scraper.</p></div>
+        </div>
+        <a class="btn btn-mark" href="/custom#quote">Request a scraper</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKETS -->
+  <section class="section" id="markets" data-sec="markets">
+    <div class="wrap markets">
+      <div>
+        <div class="section-head" style="margin-bottom:0">
+          <span class="eyebrow">Daraz, all five storefronts</span>
+          <h2>Change one field. Get another country.</h2>
+          <p class="lede">Few scraper catalogs cover South Asia. Ours reads every Daraz market, and prices come back in local currency. Tap a country to see it switch.</p>
+        </div>
+        <div class="flags" id="flags" role="group" aria-label="Choose a Daraz market"></div>
+      </div>
+      <div class="mk-stage">
+        <div class="browser">
+          <div class="b-bar"><div class="b-dots"><i></i><i></i><i></i></div><div class="b-url" id="mk-url">www.daraz.com.bd/products/redmi-buds-6-active</div></div>
+          <div class="mk-card">
+            <div id="mk-art"></div>
+            <div style="display:grid;gap:6px;min-width:0">
+              <span class="muted" style="font-size:14px">Redmi Buds 6 Active Wireless Earbuds</span>
+              <div class="mk-price" id="mk-price">৳ 1,849</div>
+              <div><span class="mk-old" id="mk-old">৳ 2,499</span><span class="mk-badge">-26%</span></div>
+              <span class="muted mono" style="font-size:12px" id="mk-cur">currency: BDT · example price</span>
+            </div>
+          </div>
+        </div>
+        <div class="code" aria-label="Scraper input">{<br>&nbsp;&nbsp;<span class="k">"country_domain":</span> <span class="v" id="mk-code">"bd"</span>,<br>&nbsp;&nbsp;<span class="k">"search_keywords":</span> <span class="v">["earbuds"]</span><br>}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing" data-sec="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Pay per result</span>
+        <h2>You only pay for rows you get</h2>
+        <p class="lede">No subscription from us. Drag the slider to see what a run costs.</p>
+      </div>
+      <div class="calc">
+        <div class="calc-l">
+          <div class="seg" id="calc-seg" role="group" aria-label="Scraper"></div>
+          <div class="range-wrap">
+            <label for="calc-rows">How many results? <output id="calc-out" class="num">10,000</output></label>
+            <input type="range" id="calc-rows" min="0" max="1000" value="667">
+            <div class="ticks"><span>100</span><span>1K</span><span>10K</span><span>100K</span></div>
+          </div>
+          <div class="compare" id="calc-cmp"></div>
+        </div>
+        <div class="calc-r">
+          <span class="c-label" style="color:inherit;opacity:.8">Estimated cost</span>
+          <div class="big-cost" id="calc-cost">$10.00</div>
+          <div class="receipt">
+            <div><span>results</span><span id="r-rows">10,000</span></div>
+            <div><span>rate</span><span id="r-rate">$1.00 / 1,000</span></div>
+            <div><span>billed by</span><span>Apify</span></div>
+          </div>
+          <small id="calc-tip">Tracking 1,000 Daraz products every day costs about $30 a month. Apify's free plan covers small test runs.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOM -->
+  <section class="section" id="custom" data-sec="custom">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Custom data feeds</span>
+        <h2>Any site in. Clean data out. We keep it running.</h2>
+        <p class="lede">Tell us the site and the fields you need. We build the scraper, deliver the data on your schedule and fix it when the site changes.</p>
+      </div>
+      <div class="pipe">
+        <div class="pipe-col" id="pipe-in">
+          <span class="c-label">Your source</span>
+          <div class="node"><i>RE</i>Real estate listings</div>
+          <div class="node"><i>TR</i>Travel and hotel prices</div>
+          <div class="node"><i>AU</i>Car marketplaces</div>
+          <div class="node"><i>SC</i>Seller catalogs</div>
+        </div>
+        <div class="flow" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="engine">
+          <svg class="lex working" viewBox="0 0 80 80" aria-hidden="true"></svg>
+          <b>Scraplex</b>
+          <small>build · run · maintain</small>
+        </div>
+        <div class="flow" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="pipe-col out" id="pipe-out">
+          <span class="c-label">Delivered to</span>
+          <div class="node"><i>GS</i>Google Sheets</div>
+          <div class="node"><i>DB</i>Your database</div>
+          <div class="node"><i>{}</i>JSON API</div>
+          <div class="node"><i>@</i>Email or Slack alerts</div>
+        </div>
+      </div>
+
+      <div class="custom-teaser">
+        <div class="chips"><span class="chip">100 sample rows first</span><span class="chip">Pilot in 2 to 3 working days</span><span class="chip">You own the data</span><span class="chip">We fix it when the site changes</span></div>
+        <div class="btn-row"><a class="btn btn-mark" href="/custom#quote">Get a free pilot</a><a class="btn" href="/custom">How custom feeds work</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDES -->
+  <section class="section" id="guides" data-sec="guides">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Guides</span>
+        <h2>Learn the exact settings before you run</h2>
+        <p class="lede">Step-by-step tutorials for each scraper, with example inputs and what they cost.</p>
+      </div>
+<!-- @guides-teaser -->
+      <div class="guide-cards"><a class="gcard" href="/guides/scrape-daraz-product-data">
+  <div class="gcard-top"><span class="gsym icon cat-ecom" aria-hidden="true"><img src="/assets/icons/daraz-product-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><span class="g-meta"><span>23 Nov 2026</span><span>7 min read</span></span></div>
+  <h3>How to Scrape Daraz Product Data: Prices, Sellers and Stock (2026 Guide)</h3>
+  <p>Step-by-step guide to scraping Daraz products in Bangladesh, Pakistan, Sri Lanka, Nepal and Myanmar. Export prices, discounts, sellers and stock to CSV or Excel without code.</p>
+</a><a class="gcard" href="/guides/export-daraz-reviews">
+  <div class="gcard-top"><span class="gsym icon cat-ecom" aria-hidden="true"><img src="/assets/icons/daraz-product-review-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><span class="g-meta"><span>21 Nov 2026</span><span>6 min read</span></span></div>
+  <h3>How to Export Daraz Product Reviews to CSV or Excel</h3>
+  <p>Export Daraz product reviews with ratings, review text, photos and votes to CSV or Excel. Filter by star rating and sort by most recent. Works in all 5 Daraz countries.</p>
+</a><a class="gcard" href="/guides/export-youtube-comments">
+  <div class="gcard-top"><span class="gsym icon cat-social" aria-hidden="true"><img src="/assets/icons/youtube-comments-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><span class="g-meta"><span>19 Nov 2026</span><span>6 min read</span></span></div>
+  <h3>How to Export YouTube Comments to Excel or CSV (No API Key)</h3>
+  <p>Export all comments and replies from any YouTube video or Short to Excel, CSV or JSON. No YouTube API key or coding needed. Includes likes, reply counts and video stats.</p>
+</a></div>
+<!-- /@guides-teaser -->
+      <div style="margin-top:24px"><a class="btn" href="/guides">All guides</a></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" data-sec="faq">
+    <div class="wrap faq">
+      <div style="display:grid;gap:22px">
+        <div class="section-head" style="margin-bottom:0">
+          <span class="eyebrow">Ask Lex</span>
+          <h2>Questions people ask before their first run</h2>
+          <p class="lede">Tap a question and I'll answer it.</p>
+        </div>
+        <div class="qs" id="qs"></div>
+      </div>
+      <div class="thread" id="thread" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="band">
+    <div class="wrap">
+      <svg class="lex lex-float" viewBox="0 0 80 80" aria-hidden="true"></svg>
+      <div>
+        <h2>Ready when you are.</h2>
+        <p>Run a ready-made scraper on Apify in a few minutes, or send us a site and get 100 sample rows from a free pilot.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-mark" href="https://apify.com/itclan-bd" target="_blank" rel="noopener">Open on Apify</a>
+        <a class="btn" href="/custom">Get a custom feed</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- @footer -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="/"><span class="brand-mark">Sx</span>Scraplex</a>
+        <p class="muted">Ready-made scrapers you can run today, and custom data feeds built and maintained for you.</p>
+      </div>
+      <div><h4>Scrapers</h4><ul><li><a href="/scrapers/daraz-product-scraper">Daraz Product Scraper</a></li><li><a href="/scrapers/daraz-product-review-scraper">Daraz Product Review Scraper</a></li><li><a href="/scrapers/youtube-comments-scraper">YouTube Comments Scraper</a></li><li><a href="/scrapers/google-maps-scraper">Google Maps Scraper</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="/#demo">Live demo</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#markets">Daraz markets</a></li><li><a href="/custom">Custom data feeds</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about">About Scraplex</a></li><li><a href="/guides">Guides</a></li><li><a href="https://apify.com/itclan-bd" target="_blank" rel="noopener">Our Apify profile</a></li><li><a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></li></ul></div>
+    </div>
+    <div class="foot-base">
+      <span>Scraplex, a product of <a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></span>
+      <span>Building data tools since 2016.</span>
+    </div>
+    <p class="foot-note">Daraz, YouTube and Google Maps are trademarks of their owners. Scraplex is an independent tool and is not affiliated with them.</p>
+  </div>
+</footer>
+<!-- /@footer -->
+
+<div class="dock off" id="dock" aria-live="polite">
+  <div class="say" id="dock-say"><span id="dock-text"></span><br><span id="dock-act"></span><button class="dock-x" id="dock-x" type="button" aria-label="Hide Lex's tips">×</button></div>
+  <button class="dock-bot" id="dock-bot" type="button" aria-label="Show Lex's tips"><svg class="lex" viewBox="0 0 80 80" aria-hidden="true"></svg></button>
+</div>
+
+<script src="/assets/lex.js"></script>
+<script src="/assets/demo.js"></script>
+<script src="/assets/home.js"></script>
+</body>
+</html>

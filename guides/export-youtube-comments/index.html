@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How to Export YouTube Comments to Excel or CSV (No API Key) | Scraplex</title>
+<meta name="description" content="Export all comments and replies from any YouTube video or Short to Excel, CSV or JSON. No YouTube API key or coding needed. Includes likes, reply counts and video stats.">
+<meta property="og:site_name" content="Scraplex">
+<meta property="og:title" content="How to Export YouTube Comments to Excel or CSV (No API Key) | Scraplex">
+<meta property="og:description" content="Export all comments and replies from any YouTube video or Short to Excel, CSV or JSON. No YouTube API key or coding needed. Includes likes, reply counts and video stats.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<script>(function(){var u=location.origin+"/guides/export-youtube-comments";var l=document.createElement("link");l.rel="canonical";l.href=u;document.head.appendChild(l);var m=document.createElement("meta");m.setAttribute("property","og:url");m.content=u;document.head.appendChild(m)})()</script>
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Export YouTube Comments to Excel or CSV (No API Key)", "description": "Export all comments and replies from any YouTube video or Short to Excel, CSV or JSON. No YouTube API key or coding needed. Includes likes, reply counts and video stats.", "datePublished": "2026-11-19", "dateModified": "2026-11-19", "author": {"@type": "Organization", "name": "ITclan BD", "url": "https://itclanbd.com"}, "publisher": {"@type": "Organization", "name": "Scraplex"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "From $0.50 per 1,000 comments. Exporting 10,000 comments costs about $5."}}, {"@type": "Question", "name": "Does it include replies?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, by default. Set includeReplies to false to collect top-level comments only."}}, {"@type": "Question", "name": "How many videos can I run at once?", "acceptedAnswer": {"@type": "Answer", "text": "Up to 20 links per run. For a whole channel, split the links across several runs or schedule them."}}]}</script>
+</head>
+<body data-tip="Stuck on a step? I can run the YouTube Comments Scraper for you on a schedule." data-tip-href="/custom" data-tip-label="Get a custom feed">
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Scraplex home"><span class="brand-mark">Sx</span>Scraplex</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="/#demo" data-nav="demo">Live demo</a>
+      <a href="/scrapers" data-nav="scrapers">Scrapers</a>
+      <a href="/#pricing" data-nav="pricing">Pricing</a>
+      <a href="/custom" data-nav="custom">Custom data</a>
+      <a href="/guides" data-nav="guides" aria-current="page">Guides</a>
+      <a href="/about" data-nav="about">About</a>
+    </nav>
+    <button class="theme-btn" type="button" aria-label="Switch theme"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span><i></i><i></i><i></i></span>Menu</button>
+    <a class="btn btn-mark btn-sm head-cta" href="/custom">Get a custom feed</a>
+  </div>
+</header>
+
+<main>
+<div class="read-bar" aria-hidden="true"><i></i></div>
+<div class="wrap art-grid">
+  <article>
+    <header class="art-head">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/guides">Guides</a><span>/</span><span>YouTube Comments Scraper</span></nav>
+      <h1>How to Export YouTube Comments to Excel or CSV (No API Key)</h1>
+      <p class="lede">Export all comments and replies from any YouTube video or Short to Excel, CSV or JSON. No YouTube API key or coding needed. Includes likes, reply counts and video stats.</p>
+      <div class="byline"><span>By the Scraplex team at ITclan BD</span><span>Updated <time datetime="2026-11-19">19 Nov 2026</time></span><span>6 min read</span></div>
+    </header>
+    <div class="answer">
+      <svg class="lex" viewBox="0 0 80 80" aria-hidden="true"></svg>
+      <div class="say"><b>Short answer</b>Paste up to 20 YouTube video or Shorts links into the YouTube Comments Scraper on Apify, choose Newest or Top, decide whether to include replies, and run it. You get every comment with its text, likes, reply count, author and the video&#x27;s own stats, exportable to Excel or CSV. No API key is needed and it starts at $0.50 per 1,000 comments.</div>
+    </div>
+    <div class="prose">
+<p>YouTube comments are unfiltered customer research. Viewers ask questions, compare products and say what they want next. Reading them on the page works for one video. For ten videos, or a competitor's whole channel, you need an export.</p>
+<h2 id="why">Why export YouTube comments</h2>
+<p>Marketers use comment exports to find content ideas, brands use them to track how a launch lands, and agencies use them to check that an influencer's audience is real. In a spreadsheet, you can sort by likes, filter by keyword and count recurring questions in minutes.</p>
+<h2 id="api">The problem with the YouTube API</h2>
+<p>The official YouTube Data API can return comments, but you need a Google Cloud project, an API key and code to page through results, and daily quota limits cap how much you can pull. The <a href="/scrapers/youtube-comments-scraper">YouTube Comments Scraper</a> skips all of that: you paste links and get a file.</p>
+<h2 id="steps">How to export comments in 4 steps</h2>
+<ol>
+<li>Copy the links of the videos or Shorts you want. Full links, Shorts links and youtu.be links all work.</li>
+<li>Open the YouTube Comments Scraper on Apify and paste up to 20 links into <code>video_urls</code>.</li>
+<li>Pick <code>sort_type</code>: Newest for monitoring, Top for the most liked comments. Set <code>max_comments</code>, or turn on <code>scrape_all_comments</code> to get everything.</li>
+<li>Press Start, then download the results as Excel, CSV or JSON.</li>
+</ol>
+<div class="code"><pre><code>{
+  "video_urls": ["https://www.youtube.com/watch?v=..."],
+  "sort_type": "Top",
+  "includeReplies": true,
+  "max_comments": 1000
+}</code></pre></div>
+<h2 id="fields">Data you get for each comment</h2>
+<div class="tbl"><table><thead><tr><th>Group</th><th>Fields</th></tr></thead><tbody>
+<tr><td>Comment</td><td>text, likes, publish time, reply count, reply level, isReply</td></tr>
+<tr><td>Commenter</td><td>name, channel ID and URL, avatar, verified flag, creator flag</td></tr>
+<tr><td>Video</td><td>title, description, keywords, category, duration, publish date, views, likes</td></tr>
+<tr><td>Channel</td><td>channel name, ID and URL</td></tr>
+</tbody></table></div>
+<p>The creator flag marks replies from the channel owner, which is useful for checking how actively a creator talks to their audience.</p>
+<h2 id="ideas">5 ways to use comment data</h2>
+<ol>
+<li><b>Content ideas:</b> filter for comments containing "how" or "can you" to list the questions your audience asks.</li>
+<li><b>Product feedback:</b> export comments from review videos of your product and your competitors'.</li>
+<li><b>Launch tracking:</b> run the export daily for the first week after a launch video.</li>
+<li><b>Influencer vetting:</b> look for repeated, generic comments that suggest bought engagement.</li>
+<li><b>Sentiment analysis:</b> send the text column to an AI model and score each comment.</li>
+</ol>
+      <div class="cta-inline">
+        <h3>Try the YouTube Comments Scraper</h3>
+        <p>$0.50 per 1,000 results. Runs on Apify, with a free plan to start.</p>
+        <div class="btn-row"><a class="btn btn-ink" href="https://apify.com/itclan-bd/youtube-comments-scraper" target="_blank" rel="noopener">Run on Apify</a><a class="btn" href="/scrapers/youtube-comments-scraper">Watch it run</a></div>
+      </div>
+      <h2 id="faq">FAQ</h2>
+    </div>
+    <div class="faq-list"><details><summary>How much does it cost?</summary><p>From $0.50 per 1,000 comments. Exporting 10,000 comments costs about $5.</p></details><details><summary>Does it include replies?</summary><p>Yes, by default. Set includeReplies to false to collect top-level comments only.</p></details><details><summary>How many videos can I run at once?</summary><p>Up to 20 links per run. For a whole channel, split the links across several runs or schedule them.</p></details></div>
+  </article>
+  <aside class="aside">
+    <div class="box box-toc"><span class="c-label">On this page</span><ol class="toc" id="toc"><li><a href="#why">Why export YouTube comments</a></li><li><a href="#api">The problem with the YouTube API</a></li><li><a href="#steps">How to export comments in 4 steps</a></li><li><a href="#fields">Data you get for each comment</a></li><li><a href="#ideas">5 ways to use comment data</a></li><li><a href="#faq">FAQ</a></li></ol></div>
+    <div class="box">
+      <div class="box-head"><span class="gsym icon cat-social" aria-hidden="true"><img src="/assets/icons/youtube-comments-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><div><b>YouTube Comments Scraper</b></div></div>
+      <div class="box-price">$0.50<span>per 1,000 results, billed by Apify</span></div>
+      <a class="btn btn-ink btn-sm" href="/scrapers/youtube-comments-scraper">See the live demo</a>
+      <a class="btn btn-sm" href="https://apify.com/itclan-bd/youtube-comments-scraper" target="_blank" rel="noopener">Open on Apify ↗</a>
+    </div>
+    <div class="box hl">
+      <h3>Rather not run it yourself?</h3>
+      <p class="muted">We build and run custom feeds, and fix them when the site changes. 100 sample rows first.</p>
+      <a class="btn btn-mark btn-sm" href="/custom">Get a custom feed</a>
+    </div>
+  </aside>
+</div>
+
+<section class="more">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:28px"><span class="eyebrow">Keep reading</span><h2>More guides</h2></div>
+    <div class="guide-cards"><a class="gcard" href="/guides/scrape-daraz-product-data">
+  <div class="gcard-top"><span class="gsym icon cat-ecom" aria-hidden="true"><img src="/assets/icons/daraz-product-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><span class="g-meta"><span>23 Nov 2026</span><span>7 min read</span></span></div>
+  <h3>How to Scrape Daraz Product Data: Prices, Sellers and Stock (2026 Guide)</h3>
+  <p>Step-by-step guide to scraping Daraz products in Bangladesh, Pakistan, Sri Lanka, Nepal and Myanmar. Export prices, discounts, sellers and stock to CSV or Excel without code.</p>
+</a><a class="gcard" href="/guides/export-daraz-reviews">
+  <div class="gcard-top"><span class="gsym icon cat-ecom" aria-hidden="true"><img src="/assets/icons/daraz-product-review-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><span class="g-meta"><span>21 Nov 2026</span><span>6 min read</span></span></div>
+  <h3>How to Export Daraz Product Reviews to CSV or Excel</h3>
+  <p>Export Daraz product reviews with ratings, review text, photos and votes to CSV or Excel. Filter by star rating and sort by most recent. Works in all 5 Daraz countries.</p>
+</a><a class="gcard" href="/guides/google-maps-lead-generation">
+  <div class="gcard-top"><span class="gsym icon cat-local" aria-hidden="true"><img src="/assets/icons/google-maps-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><span class="g-meta"><span>17 Nov 2026</span><span>8 min read</span></span></div>
+  <h3>How to Scrape Google Maps for Local Business Leads (With Reviews)</h3>
+  <p>Build local B2B lead lists from Google Maps: business names, phones, websites, ratings and reviews by city and category. Step-by-step guide with example inputs.</p>
+</a></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <svg class="lex lex-float" viewBox="0 0 80 80" aria-hidden="true"></svg>
+    <div><h2>Need a site we don&#x27;t cover yet?</h2><p>Tell us the site and the fields you need. We send 100 sample rows before you pay for a build.</p></div>
+    <div class="btn-row"><a class="btn btn-mark" href="/custom">Get a custom feed</a><a class="btn " href="/#scrapers">Browse scrapers</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="/"><span class="brand-mark">Sx</span>Scraplex</a>
+        <p class="muted">Ready-made scrapers you can run today, and custom data feeds built and maintained for you.</p>
+      </div>
+      <div><h4>Scrapers</h4><ul><li><a href="/scrapers/daraz-product-scraper">Daraz Product Scraper</a></li><li><a href="/scrapers/daraz-product-review-scraper">Daraz Product Review Scraper</a></li><li><a href="/scrapers/youtube-comments-scraper">YouTube Comments Scraper</a></li><li><a href="/scrapers/google-maps-scraper">Google Maps Scraper</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="/#demo">Live demo</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#markets">Daraz markets</a></li><li><a href="/custom">Custom data feeds</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about">About Scraplex</a></li><li><a href="/guides">Guides</a></li><li><a href="https://apify.com/itclan-bd" target="_blank" rel="noopener">Our Apify profile</a></li><li><a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></li></ul></div>
+    </div>
+    <div class="foot-base">
+      <span>Scraplex, a product of <a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></span>
+      <span>Building data tools since 2016.</span>
+    </div>
+    <p class="foot-note">Daraz, YouTube and Google Maps are trademarks of their owners. Scraplex is an independent tool and is not affiliated with them.</p>
+  </div>
+</footer>
+
+<div class="dock off" id="dock" aria-live="polite">
+  <div class="say" id="dock-say"><span id="dock-text"></span><br><span id="dock-act"></span><button class="dock-x" id="dock-x" type="button" aria-label="Hide Lex's tips">×</button></div>
+  <button class="dock-bot" id="dock-bot" type="button" aria-label="Show Lex's tips"><svg class="lex" viewBox="0 0 80 80" aria-hidden="true"></svg></button>
+</div>
+
+<script src="/assets/lex.js"></script>
+<script>
+(() => {
+  const links = [...document.querySelectorAll("#toc a")];
+  const heads = links.map(a => document.getElementById(a.getAttribute("href").slice(1))).filter(Boolean);
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    if (!en.isIntersecting) return;
+    links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + en.target.id));
+  }), { rootMargin: "-20% 0px -70% 0px" });
+  heads.forEach(h => io.observe(h));
+})();
+</script>
+</body>
+</html>

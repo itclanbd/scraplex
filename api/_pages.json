@@ -1,0 +1,49 @@
+[
+  {
+    "path": "/"
+  },
+  {
+    "path": "/guides"
+  },
+  {
+    "path": "/guides/scrape-daraz-product-data",
+    "lastmod": "2026-11-23"
+  },
+  {
+    "path": "/guides/export-daraz-reviews",
+    "lastmod": "2026-11-21"
+  },
+  {
+    "path": "/guides/export-youtube-comments",
+    "lastmod": "2026-11-19"
+  },
+  {
+    "path": "/guides/google-maps-lead-generation",
+    "lastmod": "2026-11-17"
+  },
+  {
+    "path": "/guides/daraz-price-tracking",
+    "lastmod": "2026-11-14"
+  },
+  {
+    "path": "/about"
+  },
+  {
+    "path": "/custom"
+  },
+  {
+    "path": "/scrapers"
+  },
+  {
+    "path": "/scrapers/daraz-product-scraper"
+  },
+  {
+    "path": "/scrapers/daraz-product-review-scraper"
+  },
+  {
+    "path": "/scrapers/youtube-comments-scraper"
+  },
+  {
+    "path": "/scrapers/google-maps-scraper"
+  }
+]

@@ -1,0 +1,474 @@
+{
+  "scrapers": [
+    {
+      "slug": "daraz-product-scraper",
+      "sym": "Dp",
+      "no": "01",
+      "cat": "ecom",
+      "catName": "E-commerce",
+      "name": "Daraz Product Scraper",
+      "short": "Products, prices, sellers and stock from Daraz search and category pages.",
+      "price": "$1.00",
+      "unit": "per 1,000 results",
+      "facts": [
+        [
+          "Price",
+          "$1.00 / 1,000 results"
+        ],
+        [
+          "Rating",
+          "5.0 from 8 ratings"
+        ],
+        [
+          "Users",
+          "203"
+        ],
+        [
+          "Markets",
+          "5 Daraz countries"
+        ]
+      ],
+      "intro": "Search by keyword or paste category URLs and get every product with its price, discount, seller, rating, sold count and stock status. Works across all five Daraz markets, in local currency.",
+      "fields": [
+        [
+          "Product",
+          "title, description, productId, sku, brand, brandId, categoryIds"
+        ],
+        [
+          "Pricing",
+          "price, priceFormatted, originalPrice, discountPct, currency"
+        ],
+        [
+          "Seller",
+          "sellerName, sellerId, location"
+        ],
+        [
+          "Social proof",
+          "rating, reviewCount, soldCount"
+        ],
+        [
+          "Status",
+          "inStock, isSponsored, badges, badgeText"
+        ],
+        [
+          "Links and metadata",
+          "imageUrl, productUrl, country, scrapedAt"
+        ]
+      ],
+      "inputs": [
+        [
+          "country_domain",
+          "Required. pk, bd, np, lk or mm."
+        ],
+        [
+          "search_keywords",
+          "One or more search terms."
+        ],
+        [
+          "startUrls",
+          "Up to 100 category, catalog or search URLs."
+        ],
+        [
+          "sortBy",
+          "popularity, priceasc or pricedesc."
+        ],
+        [
+          "minRating, minPrice, maxPrice",
+          "Filters, prices in local currency."
+        ],
+        [
+          "includeOutOfStock",
+          "Keep out-of-stock items. Default true."
+        ],
+        [
+          "maxProducts / maxPages",
+          "Default 100 products or 3 pages. 0 means no limit."
+        ]
+      ],
+      "uses": [
+        [
+          "Price monitoring",
+          "Track your products and your competitors' prices and discounts every day."
+        ],
+        [
+          "Market research",
+          "See which brands, sellers and price points lead a category."
+        ],
+        [
+          "Assortment gaps",
+          "Find products with high sold counts and few sellers."
+        ],
+        [
+          "Seller intelligence",
+          "Map who sells what, where, and at what rating."
+        ]
+      ],
+      "run": "{\n    \"country_domain\": \"bd\",\n    \"search_keywords\": [\"earbuds\"],\n    \"maxProducts\": 100,\n}",
+      "faq": [
+        [
+          "Which Daraz countries are covered?",
+          "Pakistan (daraz.pk), Bangladesh (daraz.com.bd), Nepal (daraz.com.np), Sri Lanka (daraz.lk) and Myanmar (shop.com.mm). Prices come back in the local currency."
+        ],
+        [
+          "Does it return customer reviews?",
+          "No. It returns ratings and review counts. For the review text, use the Daraz Product Review Scraper."
+        ]
+      ],
+      "related": [
+        "daraz-product-review-scraper",
+        "google-maps-scraper",
+        "youtube-comments-scraper"
+      ]
+    },
+    {
+      "slug": "daraz-product-review-scraper",
+      "sym": "Dr",
+      "no": "02",
+      "cat": "ecom",
+      "catName": "E-commerce",
+      "name": "Daraz Product Review Scraper",
+      "short": "Review text, star ratings, photos and votes for any Daraz product.",
+      "price": "$1.00",
+      "unit": "per 1,000 reviews",
+      "facts": [
+        [
+          "Price",
+          "$1.00 / 1,000 reviews"
+        ],
+        [
+          "Rating",
+          "5.0 from 13 ratings"
+        ],
+        [
+          "Users",
+          "79"
+        ],
+        [
+          "Markets",
+          "5 Daraz countries"
+        ]
+      ],
+      "intro": "Paste Daraz product URLs and collect every review with its rating, text, photos, videos, likes and votes. Sort by most recent or by rating, and filter by star level.",
+      "fields": [
+        [
+          "Review",
+          "reviewID, reviewContent, rating, reviewTime, boughtDate, relevanceScore"
+        ],
+        [
+          "Reviewer",
+          "reviewerID, reviewerName"
+        ],
+        [
+          "Engagement",
+          "likes, upVotes, downVotes, replies"
+        ],
+        [
+          "Media",
+          "images, videos"
+        ],
+        [
+          "Product",
+          "productID, productTitle, productUrl, productPic, productCategoryId, skuInfo"
+        ],
+        [
+          "Seller and market",
+          "sellerId, country"
+        ]
+      ],
+      "inputs": [
+        [
+          "urls",
+          "Required. Daraz product page URLs."
+        ],
+        [
+          "country",
+          "BD, PK, LK, MM or NP. Must match the URL's domain."
+        ],
+        [
+          "sorting_order",
+          "0 relevance, 1 most recent, 2 rating high to low, 3 rating low to high."
+        ],
+        [
+          "star_filter",
+          "0 for all ratings, or 1 to 5 stars."
+        ]
+      ],
+      "uses": [
+        [
+          "Product research",
+          "Read what buyers praise and complain about before you stock a product."
+        ],
+        [
+          "Quality alerts",
+          "Pull 1 and 2 star reviews for your own listings every week."
+        ],
+        [
+          "Sentiment analysis",
+          "Feed review text into your AI or BI tool to score products."
+        ],
+        [
+          "Competitor weak spots",
+          "Find recurring complaints in rival products."
+        ]
+      ],
+      "run": "{\n    \"urls\": [\"https://www.daraz.com.bd/products/...\"],\n    \"country\": \"BD\",\n    \"sorting_order\": 1,\n}",
+      "faq": [
+        [
+          "Can I get only negative reviews?",
+          "Yes. Set star_filter to 1 or 2 to collect only those ratings."
+        ],
+        [
+          "Are reviewer names shown in full?",
+          "Daraz masks most reviewer names on its own site, and the scraper returns them as Daraz shows them."
+        ]
+      ],
+      "related": [
+        "daraz-product-scraper",
+        "google-maps-scraper",
+        "youtube-comments-scraper"
+      ]
+    },
+    {
+      "slug": "youtube-comments-scraper",
+      "sym": "Yc",
+      "no": "03",
+      "cat": "social",
+      "catName": "Social and video",
+      "name": "YouTube Comments Scraper",
+      "short": "Comments and replies from any video or Short, with video and channel details.",
+      "price": "$0.50",
+      "unit": "per 1,000 results",
+      "facts": [
+        [
+          "Price",
+          "from $0.50 / 1,000 results"
+        ],
+        [
+          "Rating",
+          "5.0"
+        ],
+        [
+          "Per run",
+          "1 to 20 videos"
+        ],
+        [
+          "API key",
+          "Not needed"
+        ]
+      ],
+      "intro": "Paste up to 20 YouTube video or Shorts links and export every comment and reply, with likes, reply counts, commenter details and the video's own stats. No YouTube API key or code needed.",
+      "fields": [
+        [
+          "Comment",
+          "comment ID, text, likes, publish time, reply level, reply count, isReply"
+        ],
+        [
+          "Commenter",
+          "name, channel ID and URL, avatar, verified flag, creator flag"
+        ],
+        [
+          "Video",
+          "video ID and URL, title, description, keywords, category, thumbnail, duration, publish date, views, likes"
+        ],
+        [
+          "Channel",
+          "channel name, ID and URL"
+        ]
+      ],
+      "inputs": [
+        [
+          "video_urls",
+          "Required. 1 to 20 video, Shorts or youtu.be links."
+        ],
+        [
+          "sort_type",
+          "Newest (default) or Top."
+        ],
+        [
+          "includeReplies",
+          "Include replies. Default true."
+        ],
+        [
+          "scrape_all_comments",
+          "Collect every comment and ignore the limit."
+        ],
+        [
+          "max_comments",
+          "Comments per video, replies included. Default 100."
+        ]
+      ],
+      "uses": [
+        [
+          "Audience research",
+          "Learn what viewers ask about in your niche, in their own words."
+        ],
+        [
+          "Sentiment tracking",
+          "Measure how a launch or campaign video lands."
+        ],
+        [
+          "Content ideas",
+          "Turn repeated questions into your next video or blog post."
+        ],
+        [
+          "Influencer vetting",
+          "Check whether a creator's audience is real and engaged."
+        ]
+      ],
+      "run": "{\n    \"video_urls\": [\"https://www.youtube.com/watch?v=...\"],\n    \"sort_type\": \"Top\",\n    \"max_comments\": 500,\n}",
+      "faq": [
+        [
+          "Do I need a YouTube API key?",
+          "No. Paste the video links and run it."
+        ],
+        [
+          "Does it work on Shorts?",
+          "Yes. Shorts links and youtu.be short links both work."
+        ]
+      ],
+      "related": [
+        "google-maps-scraper",
+        "daraz-product-review-scraper",
+        "daraz-product-scraper"
+      ]
+    },
+    {
+      "slug": "google-maps-scraper",
+      "sym": "Gm",
+      "no": "04",
+      "cat": "local",
+      "catName": "Local and maps",
+      "name": "Google Maps Places & Reviews Scraper",
+      "short": "Business listings and their reviews from Google Maps, in one run.",
+      "price": "$3.00",
+      "unit": "per 1,000 results",
+      "facts": [
+        [
+          "Price",
+          "from $3.00 / 1,000 results"
+        ],
+        [
+          "Place fields",
+          "44"
+        ],
+        [
+          "Review fields",
+          "22"
+        ],
+        [
+          "Languages",
+          "74"
+        ]
+      ],
+      "intro": "Search by business type and location, a map area, Maps URLs or place IDs. Each result is one place with its contact details, ratings, hours and popular times, with its reviews nested inside.",
+      "fields": [
+        [
+          "Identity",
+          "name, address, phone, website, description"
+        ],
+        [
+          "Ratings",
+          "rating, review count, star distribution"
+        ],
+        [
+          "Classification",
+          "categories, price range, claim status"
+        ],
+        [
+          "Location",
+          "coordinates, Plus Codes, timezone"
+        ],
+        [
+          "Hours and traffic",
+          "opening hours, popular times"
+        ],
+        [
+          "Reviews",
+          "rating, text, translated text, photos, dates, reviewer, owner reply, per-aspect ratings"
+        ]
+      ],
+      "inputs": [
+        [
+          "searchTerms",
+          "What to search for, such as restaurant or dentist."
+        ],
+        [
+          "locationQuery",
+          "A place name or a coordinate pair."
+        ],
+        [
+          "latitude, longitude, radiusKm",
+          "A search circle, up to 500 km."
+        ],
+        [
+          "startUrls / placeIds",
+          "Google Maps links or exact place IDs."
+        ],
+        [
+          "maxPlacesPerSearch",
+          "Default 20. maxPlacesTotal caps the whole run."
+        ],
+        [
+          "maxReviewsPerPlace",
+          "0 to 500. Sort by most relevant or newest."
+        ],
+        [
+          "language",
+          "74 languages. Default en."
+        ]
+      ],
+      "uses": [
+        [
+          "Local lead lists",
+          "Build lists of businesses by type and city, with phones and websites."
+        ],
+        [
+          "Reputation monitoring",
+          "Track ratings and new reviews for your locations or clients."
+        ],
+        [
+          "Market mapping",
+          "Count and compare competitors in any area."
+        ],
+        [
+          "Site selection",
+          "Use popular times and density to judge a new location."
+        ]
+      ],
+      "run": "{\n    \"searchTerms\": [\"dentist\"],\n    \"locationQuery\": \"Austin, TX\",\n    \"maxReviewsPerPlace\": 20,\n}",
+      "faq": [
+        [
+          "Is this an official Google product?",
+          "No. It is an independent tool and is not affiliated with Google."
+        ],
+        [
+          "Can I get reviews without places?",
+          "Pass place IDs or Maps links and set maxReviewsPerPlace to collect reviews for known businesses."
+        ]
+      ],
+      "related": [
+        "daraz-product-review-scraper",
+        "youtube-comments-scraper",
+        "daraz-product-scraper"
+      ]
+    }
+  ],
+  "general_faq": [
+    [
+      "How do I run a scraper?",
+      "Open the scraper on Apify, create a free Apify account, fill in the input and press Start. Results export to CSV, JSON, Excel or Google Sheets, or come back through the Apify API."
+    ],
+    [
+      "How is pricing worked out?",
+      "You pay per result on Apify, at the price shown on each scraper. Apify bills you directly. Custom feeds are quoted per project."
+    ],
+    [
+      "Is scraping this data legal?",
+      "Our scrapers collect publicly available data. You are responsible for how you use it, including privacy rules such as GDPR when results contain personal information."
+    ],
+    [
+      "What if a site changes and a scraper breaks?",
+      "We monitor runs and fix scrapers when target sites change. For custom feeds, maintenance is part of the plan."
+    ]
+  ]
+}

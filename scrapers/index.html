@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scrapers | Scraplex</title>
+<meta name="description" content="Ready-made scrapers for Daraz, YouTube and Google Maps. Each runs on Apify and charges per result.">
+<meta property="og:site_name" content="Scraplex">
+<meta property="og:title" content="Scrapers | Scraplex">
+<meta property="og:description" content="Ready-made scrapers for Daraz, YouTube and Google Maps. Each runs on Apify and charges per result.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<script>(function(){var u=location.origin+"/scrapers";var l=document.createElement("link");l.rel="canonical";l.href=u;document.head.appendChild(l);var m=document.createElement("meta");m.setAttribute("property","og:url");m.content=u;document.head.appendChild(m)})()</script>
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body data-tip="Missing a site? We build custom scrapers too." data-tip-href="/custom#quote" data-tip-label="Request a scraper">
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Scraplex home"><span class="brand-mark">Sx</span>Scraplex</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="/#demo" data-nav="demo">Live demo</a>
+      <a href="/scrapers" data-nav="scrapers" aria-current="page">Scrapers</a>
+      <a href="/#pricing" data-nav="pricing">Pricing</a>
+      <a href="/custom" data-nav="custom">Custom data</a>
+      <a href="/guides" data-nav="guides">Guides</a>
+      <a href="/about" data-nav="about">About</a>
+    </nav>
+    <button class="theme-btn" type="button" aria-label="Switch theme"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span><i></i><i></i><i></i></span>Menu</button>
+    <a class="btn btn-mark btn-sm head-cta" href="/custom">Get a custom feed</a>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <div class="hero-talk">
+      <svg class="lex lex-float" viewBox="0 0 80 80" aria-hidden="true"></svg>
+      <div class="say" id="hero-say">Pick a scraper and I'll show you a full run, start to finish.</div>
+    </div>
+    <h1>Ready-made <span class="hl">scrapers</span></h1>
+    <p class="lede">Each one runs on Apify and charges per result. Open a scraper to watch a live demo, see every field it returns and copy the input.</p>
+    <div class="s-tools">
+      <label for="s-q" class="sr-only">Search scrapers</label>
+      <input id="s-q" class="s-search" type="search" placeholder="Search by site or data, for example reviews" autocomplete="off">
+      <div class="seg" id="s-cats" role="group" aria-label="Filter by category"><button type="button" aria-pressed="true" data-c="all">All</button><button type="button" aria-pressed="false" data-c="ecom">E-commerce</button><button type="button" aria-pressed="false" data-c="social">Social and video</button><button type="button" aria-pressed="false" data-c="local">Local and maps</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:0;padding-block:48px 88px">
+  <div class="wrap">
+    <div class="cards" id="s-list"><a class="card cat-ecom" href="/scrapers/daraz-product-scraper" data-cat="ecom" data-text="daraz product scraper products, prices, sellers and stock from daraz search and category pages. e-commerce title, description, productid, sku, brand, brandid, categoryids price, priceformatted, originalprice, discountpct, currency sellername, sellerid, location rating, reviewcount, soldcount instock, issponsored, badges, badgetext imageurl, producturl, country, scrapedat">
+  <div class="card-head">
+    <span class="sym icon"><img src="/assets/icons/daraz-product-scraper.webp" alt="" width="60" height="60" loading="lazy"></span>
+    <div><small>E-commerce</small><h2>Daraz Product Scraper</h2></div>
+    <div class="price-tag">$1.00<span>per 1,000 results</span></div>
+  </div>
+  <p>Products, prices, sellers and stock from Daraz search and category pages.</p>
+  <div class="chips"><span class="chip">Product</span><span class="chip">Pricing</span><span class="chip">Seller</span><span class="chip">Social proof</span><span class="chip">Status</span><span class="chip">Links and metadata</span></div>
+  <span class="card-go">See the live demo →</span>
+</a><a class="card cat-ecom" href="/scrapers/daraz-product-review-scraper" data-cat="ecom" data-text="daraz product review scraper review text, star ratings, photos and votes for any daraz product. e-commerce reviewid, reviewcontent, rating, reviewtime, boughtdate, relevancescore reviewerid, reviewername likes, upvotes, downvotes, replies images, videos productid, producttitle, producturl, productpic, productcategoryid, skuinfo sellerid, country">
+  <div class="card-head">
+    <span class="sym icon"><img src="/assets/icons/daraz-product-review-scraper.webp" alt="" width="60" height="60" loading="lazy"></span>
+    <div><small>E-commerce</small><h2>Daraz Product Review Scraper</h2></div>
+    <div class="price-tag">$1.00<span>per 1,000 reviews</span></div>
+  </div>
+  <p>Review text, star ratings, photos and votes for any Daraz product.</p>
+  <div class="chips"><span class="chip">Review</span><span class="chip">Reviewer</span><span class="chip">Engagement</span><span class="chip">Media</span><span class="chip">Product</span><span class="chip">Seller and market</span></div>
+  <span class="card-go">See the live demo →</span>
+</a><a class="card cat-social" href="/scrapers/youtube-comments-scraper" data-cat="social" data-text="youtube comments scraper comments and replies from any video or short, with video and channel details. social and video comment id, text, likes, publish time, reply level, reply count, isreply name, channel id and url, avatar, verified flag, creator flag video id and url, title, description, keywords, category, thumbnail, duration, publish date, views, likes channel name, id and url">
+  <div class="card-head">
+    <span class="sym icon"><img src="/assets/icons/youtube-comments-scraper.webp" alt="" width="60" height="60" loading="lazy"></span>
+    <div><small>Social and video</small><h2>YouTube Comments Scraper</h2></div>
+    <div class="price-tag">$0.50<span>per 1,000 results</span></div>
+  </div>
+  <p>Comments and replies from any video or Short, with video and channel details.</p>
+  <div class="chips"><span class="chip">Comment</span><span class="chip">Commenter</span><span class="chip">Video</span><span class="chip">Channel</span></div>
+  <span class="card-go">See the live demo →</span>
+</a><a class="card cat-local" href="/scrapers/google-maps-scraper" data-cat="local" data-text="google maps places &amp; reviews scraper business listings and their reviews from google maps, in one run. local and maps name, address, phone, website, description rating, review count, star distribution categories, price range, claim status coordinates, plus codes, timezone opening hours, popular times rating, text, translated text, photos, dates, reviewer, owner reply, per-aspect ratings">
+  <div class="card-head">
+    <span class="sym icon"><img src="/assets/icons/google-maps-scraper.webp" alt="" width="60" height="60" loading="lazy"></span>
+    <div><small>Local and maps</small><h2>Google Maps Places &amp; Reviews Scraper</h2></div>
+    <div class="price-tag">$3.00<span>per 1,000 results</span></div>
+  </div>
+  <p>Business listings and their reviews from Google Maps, in one run.</p>
+  <div class="chips"><span class="chip">Identity</span><span class="chip">Ratings</span><span class="chip">Classification</span><span class="chip">Location</span><span class="chip">Hours and traffic</span><span class="chip">Reviews</span></div>
+  <span class="card-go">See the live demo →</span>
+</a></div>
+    <div class="request" id="s-empty-req">
+      <div class="request-l">
+        <div class="sym" style="--cat:transparent">+</div>
+        <div><h3 id="s-req-title">Need a site that isn't here?</h3><p class="muted">Tell us the site and the fields. We'll quote a custom scraper.</p></div>
+      </div>
+      <a class="btn btn-mark" href="/custom#quote">Request a scraper</a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <svg class="lex lex-float" viewBox="0 0 80 80" aria-hidden="true"></svg>
+    <div><h2>Need a site we don&#x27;t cover yet?</h2><p>Tell us the site and the fields you need. We send 100 sample rows before you pay for a build.</p></div>
+    <div class="btn-row"><a class="btn btn-mark" href="/custom">Get a custom feed</a><a class="btn " href="/#scrapers">Browse scrapers</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="/"><span class="brand-mark">Sx</span>Scraplex</a>
+        <p class="muted">Ready-made scrapers you can run today, and custom data feeds built and maintained for you.</p>
+      </div>
+      <div><h4>Scrapers</h4><ul><li><a href="/scrapers/daraz-product-scraper">Daraz Product Scraper</a></li><li><a href="/scrapers/daraz-product-review-scraper">Daraz Product Review Scraper</a></li><li><a href="/scrapers/youtube-comments-scraper">YouTube Comments Scraper</a></li><li><a href="/scrapers/google-maps-scraper">Google Maps Scraper</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="/#demo">Live demo</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#markets">Daraz markets</a></li><li><a href="/custom">Custom data feeds</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about">About Scraplex</a></li><li><a href="/guides">Guides</a></li><li><a href="https://apify.com/itclan-bd" target="_blank" rel="noopener">Our Apify profile</a></li><li><a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></li></ul></div>
+    </div>
+    <div class="foot-base">
+      <span>Scraplex, a product of <a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></span>
+      <span>Building data tools since 2016.</span>
+    </div>
+    <p class="foot-note">Daraz, YouTube and Google Maps are trademarks of their owners. Scraplex is an independent tool and is not affiliated with them.</p>
+  </div>
+</footer>
+
+<div class="dock off" id="dock" aria-live="polite">
+  <div class="say" id="dock-say"><span id="dock-text"></span><br><span id="dock-act"></span><button class="dock-x" id="dock-x" type="button" aria-label="Hide Lex's tips">×</button></div>
+  <button class="dock-bot" id="dock-bot" type="button" aria-label="Show Lex's tips"><svg class="lex" viewBox="0 0 80 80" aria-hidden="true"></svg></button>
+</div>
+
+<script src="/assets/lex.js"></script>
+<script>
+(() => {
+  const q = document.getElementById("s-q"), cats = document.getElementById("s-cats"), cards = document.querySelectorAll("#s-list .card"), title = document.getElementById("s-req-title");
+  let cat = "all";
+  const apply = () => {
+    const t = q.value.toLowerCase().trim(); let n = 0;
+    cards.forEach(c => { const show = (cat === "all" || c.dataset.cat === cat) && (!t || c.dataset.text.includes(t)); c.hidden = !show; if (show) n++; });
+    title.textContent = n ? "Need a site that isn't here?" : "No scraper for that yet. We can build it.";
+  };
+  q.addEventListener("input", apply);
+  cats.addEventListener("click", ev => { const b = ev.target.closest("button"); if (!b) return; cat = b.dataset.c; cats.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b))); apply(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{
+  "/": {
+    "title": "",
+    "description": "",
+    "_current_title": "Scraplex | Web scrapers and custom data feeds",
+    "_current_description": "Ready-made scrapers for Daraz, YouTube and Google Maps, plus custom data feeds built and maintained by ITclan BD. Watch each one run live."
+  },
+  "/about": {
+    "title": "",
+    "description": "",
+    "_current_title": "About | Scraplex",
+    "_current_description": "Scraplex is the scraper catalog of ITclan BD: ready-made scrapers on Apify and custom data feeds, built by a team working with clients since 2016."
+  },
+  "/custom": {
+    "title": "",
+    "description": "",
+    "_current_title": "Custom data feeds | Scraplex",
+    "_current_description": "Custom web scrapers built, run and maintained for you. Get 100 sample rows from a free pilot before you pay for a build."
+  },
+  "/guides": {
+    "title": "",
+    "description": "",
+    "_current_title": "Web Scraping Guides | Scraplex",
+    "_current_description": "Step-by-step guides to scraping Daraz, Google Maps and YouTube data, with example inputs and costs."
+  },
+  "/guides/daraz-price-tracking": {
+    "title": "",
+    "description": "",
+    "_current_title": "Daraz Price Tracking: Monitor Competitor Prices in Bangladesh, Pakistan and More | Scraplex",
+    "_current_description": "Set up automated Daraz price tracking across BD, PK, LK, NP and MM. Track competitor prices, discounts and stock daily in Google Sheets, with no code."
+  },
+  "/guides/export-daraz-reviews": {
+    "title": "",
+    "description": "",
+    "_current_title": "How to Export Daraz Product Reviews to CSV or Excel | Scraplex",
+    "_current_description": "Export Daraz product reviews with ratings, review text, photos and votes to CSV or Excel. Filter by star rating and sort by most recent. Works in all 5 Daraz countries."
+  },
+  "/guides/export-youtube-comments": {
+    "title": "",
+    "description": "",
+    "_current_title": "How to Export YouTube Comments to Excel or CSV (No API Key) | Scraplex",
+    "_current_description": "Export all comments and replies from any YouTube video or Short to Excel, CSV or JSON. No YouTube API key or coding needed. Includes likes, reply counts and video stats."
+  },
+  "/guides/google-maps-lead-generation": {
+    "title": "",
+    "description": "",
+    "_current_title": "How to Scrape Google Maps for Local Business Leads (With Reviews) | Scraplex",
+    "_current_description": "Build local B2B lead lists from Google Maps: business names, phones, websites, ratings and reviews by city and category. Step-by-step guide with example inputs."
+  },
+  "/guides/scrape-daraz-product-data": {
+    "title": "",
+    "description": "",
+    "_current_title": "How to Scrape Daraz Product Data: Prices, Sellers and Stock (2026 Guide) | Scraplex",
+    "_current_description": "Step-by-step guide to scraping Daraz products in Bangladesh, Pakistan, Sri Lanka, Nepal and Myanmar. Export prices, discounts, sellers and stock to CSV or Excel without code."
+  },
+  "/scrapers": {
+    "title": "",
+    "description": "",
+    "_current_title": "Scrapers | Scraplex",
+    "_current_description": "Ready-made scrapers for Daraz, YouTube and Google Maps. Each runs on Apify and charges per result."
+  },
+  "/scrapers/daraz-product-review-scraper": {
+    "title": "",
+    "description": "",
+    "_current_title": "Daraz Product Review Scraper | Scraplex",
+    "_current_description": "Review text, star ratings, photos and votes for any Daraz product. $1.00 per 1,000 reviews."
+  },
+  "/scrapers/daraz-product-scraper": {
+    "title": "",
+    "description": "",
+    "_current_title": "Daraz Product Scraper | Scraplex",
+    "_current_description": "Products, prices, sellers and stock from Daraz search and category pages. $1.00 per 1,000 results."
+  },
+  "/scrapers/google-maps-scraper": {
+    "title": "",
+    "description": "",
+    "_current_title": "Google Maps Places & Reviews Scraper | Scraplex",
+    "_current_description": "Business listings and their reviews from Google Maps, in one run. $3.00 per 1,000 results."
+  },
+  "/scrapers/youtube-comments-scraper": {
+    "title": "",
+    "description": "",
+    "_current_title": "YouTube Comments Scraper | Scraplex",
+    "_current_description": "Comments and replies from any video or Short, with video and channel details. $0.50 per 1,000 results."
+  }
+}

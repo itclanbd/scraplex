@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Google Maps Places &amp; Reviews Scraper | Scraplex</title>
+<meta name="description" content="Business listings and their reviews from Google Maps, in one run. $3.00 per 1,000 results.">
+<meta property="og:site_name" content="Scraplex">
+<meta property="og:title" content="Google Maps Places &amp; Reviews Scraper | Scraplex">
+<meta property="og:description" content="Business listings and their reviews from Google Maps, in one run. $3.00 per 1,000 results.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<script>(function(){var u=location.origin+"/scrapers/google-maps-scraper";var l=document.createElement("link");l.rel="canonical";l.href=u;document.head.appendChild(l);var m=document.createElement("meta");m.setAttribute("property","og:url");m.content=u;document.head.appendChild(m)})()</script>
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Google Maps Places & Reviews Scraper", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Search by business type and location, a map area, Maps URLs or place IDs. Each result is one place with its contact details, ratings, hours and popular times, with its reviews nested inside.", "offers": {"@type": "Offer", "price": "3.00", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "ITclan BD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this an official Google product?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is an independent tool and is not affiliated with Google."}}, {"@type": "Question", "name": "Can I get reviews without places?", "acceptedAnswer": {"@type": "Answer", "text": "Pass place IDs or Maps links and set maxReviewsPerPlace to collect reviews for known businesses."}}, {"@type": "Question", "name": "How do I run a scraper?", "acceptedAnswer": {"@type": "Answer", "text": "Open the scraper on Apify, create a free Apify account, fill in the input and press Start. Results export to CSV, JSON, Excel or Google Sheets, or come back through the Apify API."}}, {"@type": "Question", "name": "How is pricing worked out?", "acceptedAnswer": {"@type": "Answer", "text": "You pay per result on Apify, at the price shown on each scraper. Apify bills you directly. Custom feeds are quoted per project."}}]}</script>
+</head>
+<body data-tip="Want this data delivered on a schedule instead? We can run it for you." data-tip-href="/custom#quote" data-tip-label="Get a custom version">
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Scraplex home"><span class="brand-mark">Sx</span>Scraplex</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="/#demo" data-nav="demo">Live demo</a>
+      <a href="/scrapers" data-nav="scrapers" aria-current="page">Scrapers</a>
+      <a href="/#pricing" data-nav="pricing">Pricing</a>
+      <a href="/custom" data-nav="custom">Custom data</a>
+      <a href="/guides" data-nav="guides">Guides</a>
+      <a href="/about" data-nav="about">About</a>
+    </nav>
+    <button class="theme-btn" type="button" aria-label="Switch theme"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span><i></i><i></i><i></i></span>Menu</button>
+    <a class="btn btn-mark btn-sm head-cta" href="/custom">Get a custom feed</a>
+  </div>
+</header>
+
+<main>
+<section class="page-hero sp-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/scrapers">Scrapers</a><span>/</span><span>Local and maps</span></nav>
+    <div class="sp-head">
+      <div class="sp-tile cat-local"><span class="sp-no">04</span><span class="sp-icon"><img src="/assets/icons/google-maps-scraper.webp" alt="Google Maps Places &amp; Reviews Scraper icon" width="96" height="96"></span><span class="sp-price">$3.00</span></div>
+      <div class="sp-intro">
+        <h1>Google Maps Places &amp; Reviews Scraper</h1>
+        <p class="lede">Search by business type and location, a map area, Maps URLs or place IDs. Each result is one place with its contact details, ratings, hours and popular times, with its reviews nested inside.</p>
+        <div class="btn-row"><a class="btn btn-mark" href="#demo">Watch it run</a><a class="btn btn-ink" href="https://apify.com/itclan-bd/google-maps-scraper" target="_blank" rel="noopener">Run on Apify ↗</a><a class="btn" href="/custom#quote">Get a custom version</a></div>
+      </div>
+    </div>
+    <div class="facts"><div class="fact"><span>Price</span><b>from $3.00 / 1,000 results</b></div><div class="fact"><span>Place fields</span><b>44</b></div><div class="fact"><span>Review fields</span><b>22</b></div><div class="fact"><span>Languages</span><b>74</b></div></div>
+  </div>
+</section>
+
+<section class="section" id="demo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Live demo</span>
+      <h2>Watch me run the Google Maps Scraper</h2>
+      <p class="lede">Every run has the same four steps: the input, the run, the results and the export. This demo uses sample data and replays on its own.</p>
+    </div>
+    <div class="console" id="console"></div>
+    <p class="picker-note" style="margin-top:12px">Sample data. Real runs return the same columns, up to thousands of rows.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Output</span><h2>Data you get</h2><p class="lede">Every result is one row with these fields, ready for CSV, Excel, JSON or Google Sheets.</p></div>
+    <div class="fgroups"><div class="fgroup"><h3>Identity</h3><div class="chips"><span class=chip>name</span><span class=chip>address</span><span class=chip>phone</span><span class=chip>website</span><span class=chip>description</span></div></div><div class="fgroup"><h3>Ratings</h3><div class="chips"><span class=chip>rating</span><span class=chip>review count</span><span class=chip>star distribution</span></div></div><div class="fgroup"><h3>Classification</h3><div class="chips"><span class=chip>categories</span><span class=chip>price range</span><span class=chip>claim status</span></div></div><div class="fgroup"><h3>Location</h3><div class="chips"><span class=chip>coordinates</span><span class=chip>Plus Codes</span><span class=chip>timezone</span></div></div><div class="fgroup"><h3>Hours and traffic</h3><div class="chips"><span class=chip>opening hours</span><span class=chip>popular times</span></div></div><div class="fgroup"><h3>Reviews</h3><div class="chips"><span class=chip>rating</span><span class=chip>text</span><span class=chip>translated text</span><span class=chip>photos</span><span class=chip>dates</span><span class=chip>reviewer</span><span class=chip>owner reply</span><span class=chip>per-aspect ratings</span></div></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap sp-split">
+    <div>
+      <div class="section-head"><span class="eyebrow">Input</span><h2>Input options</h2></div>
+      <div class="itable"><table><thead><tr><th>Option</th><th>What it does</th></tr></thead><tbody><tr><td><code>searchTerms</code></td><td>What to search for, such as restaurant or dentist.</td></tr><tr><td><code>locationQuery</code></td><td>A place name or a coordinate pair.</td></tr><tr><td><code>latitude, longitude, radiusKm</code></td><td>A search circle, up to 500 km.</td></tr><tr><td><code>startUrls / placeIds</code></td><td>Google Maps links or exact place IDs.</td></tr><tr><td><code>maxPlacesPerSearch</code></td><td>Default 20. maxPlacesTotal caps the whole run.</td></tr><tr><td><code>maxReviewsPerPlace</code></td><td>0 to 500. Sort by most relevant or newest.</td></tr><tr><td><code>language</code></td><td>74 languages. Default en.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="section-head"><span class="eyebrow">For developers</span><h2>Run it from your code</h2><p class="lede">Python with the official Apify client. JavaScript and cURL work the same way.</p></div>
+      <div class="code code-copy"><button type="button" class="copy-btn" data-copy="py-code">Copy</button><pre id="py-code">from apify_client import ApifyClient
+
+client = ApifyClient(&quot;YOUR_APIFY_TOKEN&quot;)
+
+run = client.actor(&quot;itclan-bd/google-maps-scraper&quot;).call(run_input={
+    &quot;searchTerms&quot;: [&quot;dentist&quot;],
+    &quot;locationQuery&quot;: &quot;Austin, TX&quot;,
+    &quot;maxReviewsPerPlace&quot;: 20,
+})
+
+for item in client.dataset(run[&quot;defaultDatasetId&quot;]).iterate_items():
+    print(item)</pre></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Use cases</span><h2>What people use it for</h2></div>
+    <div class="use-cards cat-local"><div class="use-card"><h3>Local lead lists</h3><p>Build lists of businesses by type and city, with phones and websites.</p></div><div class="use-card"><h3>Reputation monitoring</h3><p>Track ratings and new reviews for your locations or clients.</p></div><div class="use-card"><h3>Market mapping</h3><p>Count and compare competitors in any area.</p></div><div class="use-card"><h3>Site selection</h3><p>Use popular times and density to judge a new location.</p></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Questions</span><h2>Questions about this scraper</h2></div>
+    <div class="faq-wrap">
+      <div class="faq-list"><details><summary>Is this an official Google product?</summary><p>No. It is an independent tool and is not affiliated with Google.</p></details><details><summary>Can I get reviews without places?</summary><p>Pass place IDs or Maps links and set maxReviewsPerPlace to collect reviews for known businesses.</p></details><details><summary>How do I run a scraper?</summary><p>Open the scraper on Apify, create a free Apify account, fill in the input and press Start. Results export to CSV, JSON, Excel or Google Sheets, or come back through the Apify API.</p></details><details><summary>How is pricing worked out?</summary><p>You pay per result on Apify, at the price shown on each scraper. Apify bills you directly. Custom feeds are quoted per project.</p></details></div>
+      <aside class="faq-aside">
+        <span class="c-label">Step-by-step guide</span><a class="gcard" href="/guides/google-maps-lead-generation">
+  <div class="gcard-top"><span class="gsym icon cat-local" aria-hidden="true"><img src="/assets/icons/google-maps-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><span class="g-meta"><span>17 Nov 2026</span><span>8 min read</span></span></div>
+  <h3>How to Scrape Google Maps for Local Business Leads (With Reviews)</h3>
+  <p>Build local B2B lead lists from Google Maps: business names, phones, websites, ratings and reviews by city and category. Step-by-step guide with example inputs.</p>
+</a>
+        <div class="box">
+          <div class="box-head"><span class="gsym icon cat-local" aria-hidden="true"><img src="/assets/icons/google-maps-scraper.webp" alt="" width="44" height="44" loading="lazy"></span><div><b>Google Maps Scraper</b></div></div>
+          <div class="box-price">$3.00<span>per 1,000 results, billed by Apify</span></div>
+          <a class="btn btn-ink btn-sm" href="https://apify.com/itclan-bd/google-maps-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:0">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Related</span><h2>Other scrapers</h2></div>
+    <div class="cards"><a class="card cat-ecom" href="/scrapers/daraz-product-review-scraper" data-cat="ecom" data-text="daraz product review scraper review text, star ratings, photos and votes for any daraz product. e-commerce reviewid, reviewcontent, rating, reviewtime, boughtdate, relevancescore reviewerid, reviewername likes, upvotes, downvotes, replies images, videos productid, producttitle, producturl, productpic, productcategoryid, skuinfo sellerid, country">
+  <div class="card-head">
+    <span class="sym icon"><img src="/assets/icons/daraz-product-review-scraper.webp" alt="" width="60" height="60" loading="lazy"></span>
+    <div><small>E-commerce</small><h3>Daraz Product Review Scraper</h3></div>
+    <div class="price-tag">$1.00<span>per 1,000 reviews</span></div>
+  </div>
+  <p>Review text, star ratings, photos and votes for any Daraz product.</p>
+  <div class="chips"><span class="chip">Review</span><span class="chip">Reviewer</span><span class="chip">Engagement</span><span class="chip">Media</span><span class="chip">Product</span><span class="chip">Seller and market</span></div>
+  <span class="card-go">See the live demo →</span>
+</a><a class="card cat-social" href="/scrapers/youtube-comments-scraper" data-cat="social" data-text="youtube comments scraper comments and replies from any video or short, with video and channel details. social and video comment id, text, likes, publish time, reply level, reply count, isreply name, channel id and url, avatar, verified flag, creator flag video id and url, title, description, keywords, category, thumbnail, duration, publish date, views, likes channel name, id and url">
+  <div class="card-head">
+    <span class="sym icon"><img src="/assets/icons/youtube-comments-scraper.webp" alt="" width="60" height="60" loading="lazy"></span>
+    <div><small>Social and video</small><h3>YouTube Comments Scraper</h3></div>
+    <div class="price-tag">$0.50<span>per 1,000 results</span></div>
+  </div>
+  <p>Comments and replies from any video or Short, with video and channel details.</p>
+  <div class="chips"><span class="chip">Comment</span><span class="chip">Commenter</span><span class="chip">Video</span><span class="chip">Channel</span></div>
+  <span class="card-go">See the live demo →</span>
+</a></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <svg class="lex lex-float" viewBox="0 0 80 80" aria-hidden="true"></svg>
+    <div><h2>Need more than this scraper gives you?</h2><p>Extra fields, a different site, or a daily feed into your database. We build it and keep it running.</p></div>
+    <div class="btn-row"><a class="btn btn-mark" href="/custom">Get a custom feed</a><a class="btn " href="/#scrapers">Browse scrapers</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="/"><span class="brand-mark">Sx</span>Scraplex</a>
+        <p class="muted">Ready-made scrapers you can run today, and custom data feeds built and maintained for you.</p>
+      </div>
+      <div><h4>Scrapers</h4><ul><li><a href="/scrapers/daraz-product-scraper">Daraz Product Scraper</a></li><li><a href="/scrapers/daraz-product-review-scraper">Daraz Product Review Scraper</a></li><li><a href="/scrapers/youtube-comments-scraper">YouTube Comments Scraper</a></li><li><a href="/scrapers/google-maps-scraper">Google Maps Scraper</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="/#demo">Live demo</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#markets">Daraz markets</a></li><li><a href="/custom">Custom data feeds</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about">About Scraplex</a></li><li><a href="/guides">Guides</a></li><li><a href="https://apify.com/itclan-bd" target="_blank" rel="noopener">Our Apify profile</a></li><li><a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></li></ul></div>
+    </div>
+    <div class="foot-base">
+      <span>Scraplex, a product of <a href="https://itclanbd.com" target="_blank" rel="noopener">ITclan BD</a></span>
+      <span>Building data tools since 2016.</span>
+    </div>
+    <p class="foot-note">Daraz, YouTube and Google Maps are trademarks of their owners. Scraplex is an independent tool and is not affiliated with them.</p>
+  </div>
+</footer>
+
+<div class="dock off" id="dock" aria-live="polite">
+  <div class="say" id="dock-say"><span id="dock-text"></span><br><span id="dock-act"></span><button class="dock-x" id="dock-x" type="button" aria-label="Hide Lex's tips">×</button></div>
+  <button class="dock-bot" id="dock-bot" type="button" aria-label="Show Lex's tips"><svg class="lex" viewBox="0 0 80 80" aria-hidden="true"></svg></button>
+</div>
+
+<script src="/assets/lex.js"></script>
+<script src="/assets/demo.js"></script>
+<script>
+ScraplexDemo.mount(document.getElementById("console"), { slug: "google-maps-scraper", section: document.getElementById("demo"), loop: true });
+document.addEventListener("click", ev => {
+  const b = ev.target.closest("[data-copy]"); if (!b) return;
+  const text = document.getElementById(b.dataset.copy).textContent;
+  const done = ok => { b.textContent = ok ? "Copied" : "Select and copy"; setTimeout(() => b.textContent = "Copy", 1600); };
+  try { navigator.clipboard.writeText(text).then(() => done(true), () => done(false)); } catch (err) { done(false); }
+});
+</script>
+</body>
+</html>
