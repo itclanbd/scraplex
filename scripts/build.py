@@ -829,8 +829,45 @@ def build_404():
     write("404.html", page("Page not found | Scraplex", "This page could not be found.", "", body))
 
 
+def _file_of(path):
+    return "index.html" if path == "/" else path.lstrip("/") + "/index.html"
+
+
+def _git_date_if_unchanged(rel):
+    """Date of the last commit touching rel, if the file on disk still matches that commit; else None."""
+    import subprocess
+    try:
+        if subprocess.run(["git", "diff", "--quiet", "HEAD", "--", rel], cwd=ROOT).returncode != 0:
+            return None
+        out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", rel], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        return out or None
+    except OSError:
+        return None
+
+
+def date_pages():
+    """Give every sitemap entry a lastmod that changes only when that page's HTML changes.
+    Unchanged since the last build: keep its date. Matches the last git commit: that commit's date.
+    Otherwise it was edited now: today. A guide's lastmod is never earlier than its publish date."""
+    import hashlib
+    prev_path = os.path.join(ROOT, "api/_pages.json")
+    prev = {p["path"]: p for p in json.load(open(prev_path))} if os.path.exists(prev_path) else {}
+    today = date.today().isoformat()
+    for p in PAGES:
+        rel = _file_of(p["path"])
+        digest = hashlib.sha256(open(os.path.join(ROOT, rel), "rb").read()).hexdigest()[:16]
+        old = prev.get(p["path"], {})
+        if old.get("hash") == digest and old.get("lastmod"):
+            changed = old["lastmod"]
+        else:
+            changed = _git_date_if_unchanged(rel) or today
+        p["lastmod"] = max(changed, p.get("lastmod") or "")
+        p["hash"] = digest
+
+
 def write_seo_outputs():
     # Page list read by api/sitemap.js. The domain is added per request, so it is not stored here.
+    date_pages()
     write("api/_pages.json", json.dumps(PAGES, indent=2) + "\n")
     # Seed content/seo.json with every page, keeping any title or description already filled in.
     merged = {}

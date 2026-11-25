@@ -1,49 +1,72 @@
 [
   {
-    "path": "/"
+    "path": "/",
+    "lastmod": "2026-11-23",
+    "hash": "f0daeee1111ede3b"
   },
   {
-    "path": "/guides"
+    "path": "/guides",
+    "lastmod": "2026-11-23",
+    "hash": "f6b636d60bf7955b"
   },
   {
     "path": "/guides/scrape-daraz-product-data",
-    "lastmod": "2026-11-23"
+    "lastmod": "2026-11-23",
+    "hash": "9d7437b4f9445218"
   },
   {
     "path": "/guides/export-daraz-reviews",
-    "lastmod": "2026-11-21"
+    "lastmod": "2026-11-23",
+    "hash": "ecea7e2885003afd"
   },
   {
     "path": "/guides/export-youtube-comments",
-    "lastmod": "2026-11-19"
+    "lastmod": "2026-11-23",
+    "hash": "64fb7adf693d81df"
   },
   {
     "path": "/guides/google-maps-lead-generation",
-    "lastmod": "2026-11-17"
+    "lastmod": "2026-11-23",
+    "hash": "2eb2f68c4ddaf1bf"
   },
   {
     "path": "/guides/daraz-price-tracking",
-    "lastmod": "2026-11-14"
+    "lastmod": "2026-11-23",
+    "hash": "aceae1f5540f3b5d"
   },
   {
-    "path": "/about"
+    "path": "/about",
+    "lastmod": "2026-11-23",
+    "hash": "d534977ff3d9bfb1"
   },
   {
-    "path": "/custom"
+    "path": "/custom",
+    "lastmod": "2026-11-23",
+    "hash": "0811882cf52f836a"
   },
   {
-    "path": "/scrapers"
+    "path": "/scrapers",
+    "lastmod": "2026-11-23",
+    "hash": "83fc56245c0ab70a"
   },
   {
-    "path": "/scrapers/daraz-product-scraper"
+    "path": "/scrapers/daraz-product-scraper",
+    "lastmod": "2026-11-23",
+    "hash": "3d19e77d4f58ea4d"
   },
   {
-    "path": "/scrapers/daraz-product-review-scraper"
+    "path": "/scrapers/daraz-product-review-scraper",
+    "lastmod": "2026-11-23",
+    "hash": "c30a973a78aa96a8"
   },
   {
-    "path": "/scrapers/youtube-comments-scraper"
+    "path": "/scrapers/youtube-comments-scraper",
+    "lastmod": "2026-11-23",
+    "hash": "b13df1d7147d6cce"
   },
   {
-    "path": "/scrapers/google-maps-scraper"
+    "path": "/scrapers/google-maps-scraper",
+    "lastmod": "2026-11-23",
+    "hash": "e7e01d5405a25074"
   }
 ]
