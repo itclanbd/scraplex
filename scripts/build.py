@@ -160,7 +160,7 @@ def head_meta(path, defaults):
     ]
     gsc = _verification_token(SITE.get("google_site_verification"))
     if gsc:
-        out.append(f'<meta name="google-site-verification" content="{e(gsc)}">')
+        out.append(f'<meta name="google-site-verification" content="{e(gsc)}"/>')
     ga = (SITE.get("ga_measurement_id") or "").strip()
     if ga:
         if not re.fullmatch(r"G-[A-Z0-9]{4,}", ga):
